@@ -9,12 +9,10 @@ development:
   <<: *default
   database: masonry_development
 
-
 test:
   <<: *default
   database: masonry_test
 
-#
 production:
   <<: *default
   database: masonry_production
