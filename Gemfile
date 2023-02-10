@@ -10,6 +10,7 @@ gem 'jwt'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 gem 'rails-i18n', '~> 7.0', '>= 7.0.1'
 gem 'rubocop', '~> 1.36', require: false
+gem 'bootstrap_sb_admin_base_v2'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
