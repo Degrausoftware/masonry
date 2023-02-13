@@ -11,6 +11,10 @@ gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 gem 'rails-i18n', '~> 7.0', '>= 7.0.1'
 gem 'rubocop', '~> 1.36', require: false
 gem 'bootstrap_sb_admin_base_v2'
+gem 'sass-rails', '~> 6.0'
+gem 'webpacker', '~> 5.4', '>= 5.4.3'
+gem 'turbolinks', '~> 5.2', '>= 5.2.1'
+gem "font-awesome-rails"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -66,6 +70,11 @@ group :development, :test do
   gem 'simplecov'
   gem 'swagger-docs'
   gem 'webdrivers'
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  gem 'binding_of_caller', '~> 1.0'
+  gem 'pry', '~> 0.14.1'
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
+  gem 'brakeman', '~> 5.2'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
@@ -82,12 +91,7 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'annotate', '~> 3.1', '>= 3.1.1'
-  gem 'better_errors', '~> 2.9', '>= 2.9.1'
-  gem 'binding_of_caller', '~> 1.0'
-  gem 'brakeman', '~> 5.2'
   gem 'listen'
-  gem 'pry', '~> 0.14.1'
   gem 'rack-mini-profiler'
   gem 'rails-erd'
   gem 'spring'
