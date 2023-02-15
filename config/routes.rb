@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   namespace :backoffice do
-    get 'dashboard/index'
+    get 'dashbaord', to: 'dashboard#index'
   end
   devise_for :admins
   root "backoffice/dashboard#index"
