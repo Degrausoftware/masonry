@@ -27,4 +27,5 @@ rspec
 
 * Deployment instructions
 
-* ...
+* Member Modeling
+  [Modeling for model]()
