@@ -1,22 +1,28 @@
-# README
+# System masonry api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Informações para roda local a aplicação
 
-Things you may want to cover:
+
 
 * Ruby version
-
+```ruby
+ 3.2.0
+```
 * System dependencies
 
 * Configuration
-
+* 
 * Database creation
-
+  se preferir manual
+````ruby
+* rails db:drop db:create db:migrate
+````
 * Database initialization
 
 * How to run the test suite
-
+````ruby
+rspec 
+````
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
