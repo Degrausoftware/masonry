@@ -28,4 +28,4 @@ rspec
 * Deployment instructions
 
 * Member Modeling
-  [Modeling for model]()
+  [Modeling for model](https://github.com/Degrausoftware/masonry/blob/main/erd.pdf)
