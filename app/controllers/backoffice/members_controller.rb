@@ -1,4 +1,4 @@
-class Backoffice::MembersController < ApplicationController
+class Backoffice::MembersController < BackofficeController
   before_action :set_member, only: %i[show update destroy]
   # GET /members
   # GET /members.json
@@ -11,7 +11,7 @@ class Backoffice::MembersController < ApplicationController
   # GET /members/1
   # GET /members/1.json
   def show
-    render json: @member, include: [:address, :apjs]
+    # render json: @member, include: %i[address apjs]
   end
 
   # POST /members
@@ -19,10 +19,14 @@ class Backoffice::MembersController < ApplicationController
   def create
     @member = Member.new(member_params)
 
-    if @member.save
-      render :show, include: [:address, :apjs],status: :created, location: @member
-    else
-      render json: @member.errors, status: :unprocessable_entity
+    respond_to do |format|
+      if @member.save
+        format.html { redirect_to member_url(@member), notice: "Member was successfully created." }
+        format.json { render :show, status: :created, location: @member }
+      else
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @member.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -30,7 +34,7 @@ class Backoffice::MembersController < ApplicationController
   # PATCH/PUT /members/1.json
   def update
     if @member.update(member_params)
-      render :show,include: [:address, :apjs], status: :ok, location: @member
+      render :show, include: %i[address apjs], status: :ok, location: @member
     else
       render json: @member.errors, status: :unprocessable_entity
     end
@@ -53,7 +57,6 @@ class Backoffice::MembersController < ApplicationController
   def member_params
     params.require(:member).permit(:name, :birth_date, :place_of_birth, :state, :nationality, :city, :phone,
                                    :mobile_phone, :email, :relationship, :wedding_date, :blood_type, :fathers_name,
-                                   :mothers_name, :cpf, :degree_of_instruction, address_attributes: [:id, :street, :destroy],
-                                   apj_attributes: [:id, :name])
+                                   :mothers_name, :cpf, :degree_of_instruction)
   end
 end
