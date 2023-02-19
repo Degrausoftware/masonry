@@ -1,8 +1,7 @@
 require 'rails_helper'
 
-
 describe Member, type: :model do
- it 'is valid all attributes' do
+  it 'is valid all attributes' do
    member = create(:member)
   expect(member).to be_valid
  end
