@@ -4,17 +4,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem 'bootstrap_sb_admin_base_v2'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'devise-i18n', '~> 1.10', '>= 1.10.1'
+gem 'font-awesome-rails'
 gem 'jwt'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 gem 'rails-i18n', '~> 7.0', '>= 7.0.1'
 gem 'rubocop', '~> 1.36', require: false
-gem 'bootstrap_sb_admin_base_v2'
 gem 'sass-rails', '~> 6.0'
-gem 'webpacker', '~> 5.4', '>= 5.4.3'
 gem 'turbolinks', '~> 5.2', '>= 5.2.1'
-gem "font-awesome-rails"
+gem 'webpacker', '~> 5.4', '>= 5.4.3'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -59,10 +59,15 @@ gem 'bootsnap', require: false
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'annotate', '~> 3.1', '>= 3.1.1'
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  gem 'binding_of_caller', '~> 1.0'
+  gem 'brakeman', '~> 5.2'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'pry', '~> 0.14.1'
   gem 'rspec-rails'
   gem 'rubycritic'
   gem 'selenium-webdriver'
@@ -70,11 +75,6 @@ group :development, :test do
   gem 'simplecov'
   gem 'swagger-docs'
   gem 'webdrivers'
-  gem 'better_errors', '~> 2.9', '>= 2.9.1'
-  gem 'binding_of_caller', '~> 1.0'
-  gem 'pry', '~> 0.14.1'
-  gem 'annotate', '~> 3.1', '>= 3.1.1'
-  gem 'brakeman', '~> 5.2'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
