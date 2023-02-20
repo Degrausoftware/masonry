@@ -7,10 +7,10 @@ FactoryBot.define do
     nationality { 'Faker::Nation.nationality' }
     city {  'Faker::Address.city' }
     phone { 'Faker::PhoneNumber.phone_number_with_country_code' }
-    mobile_phone {  'Faker::PhoneNumber.cell_phone_with_country_code' }
+    mobile_phone { 'Faker::PhoneNumber.cell_phone_with_country_code' }
     email { 'Faker::Internet.email' }
     relationship { 'Faker::Demographic.marital_status' }
-    wedding_date {  'Faker::Date.birthday(min_age: 18, max_age: 65)' }
+    wedding_date { 'Faker::Date.birthday(min_age: 18, max_age: 65)' }
     blood_type { 'Faker::Blood.type' }
     fathers_name {  'Faker::Name.name'  }
     mothers_name {  'Faker::Name.name'  }
