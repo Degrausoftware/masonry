@@ -5,7 +5,7 @@ class Backoffice::MembersController < BackofficeController
   def index
     @members = Member.all
 
-    render json: @members
+    # render json: @members
   end
 
   # GET /members/1
