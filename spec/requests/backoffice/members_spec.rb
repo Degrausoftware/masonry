@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-RSpec.describe 'Backoffice::Dashboards', type: :request do
+RSpec.describe 'Backoffice::Members', type: :request do
   describe 'GET /profile' do
     it 'returns http success' do
-      get '/backoffice/dashboard/profile'
+      get '/backoffice/members/profile'
       expect(response).to have_http_status(:success)
     end
   end

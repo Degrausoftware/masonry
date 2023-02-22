@@ -5,6 +5,7 @@ ruby '3.2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'bootstrap_sb_admin_base_v2'
+gem 'cpf_cnpj'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'devise-i18n', '~> 1.10', '>= 1.10.1'
 gem 'font-awesome-rails'
@@ -96,5 +97,4 @@ group :test do
   gem 'rails-erd'
   gem 'spring'
   gem 'spring-watcher-listen'
-  gem 'web-console'
 end
