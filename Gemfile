@@ -76,11 +76,6 @@ group :development, :test do
   gem 'simplecov'
   gem 'swagger-docs'
   gem 'webdrivers'
-  gem 'better_errors', '~> 2.9', '>= 2.9.1'
-  gem 'binding_of_caller', '~> 1.0'
-  gem 'pry', '~> 0.14.1'
-  gem 'annotate', '~> 3.1', '>= 3.1.1'
-  gem 'brakeman', '~> 5.2'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
