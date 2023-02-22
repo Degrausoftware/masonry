@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema[7.0].define(version: 2023_02_21_153456) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -89,4 +91,24 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_153456) do
   end
 
   add_foreign_key "sons", "members"
+  end
+
+  create_table 'members', force: :cascade do |t|
+    t.string 'city'
+    t.string 'cpf'
+    t.string 'degree_of_instruction'
+    t.string 'email'
+    t.string 'fathers_name'
+    t.string 'mobile_phone'
+    t.string 'mothers_name'
+    t.string 'name'
+    t.string 'nationality'
+    t.string 'phone'
+    t.string 'place_of_birth'
+    t.string 'relationship'
+    t.string 'state'
+    t.string 'wedding_date'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
 end

@@ -36,6 +36,5 @@ describe Member, type: :model do
     it { should validate_presence_of :name }
     it { is_expected.to  validates_presence_of(:cpf) }
     it { is_expected.to  validates_presence_of(:mobile_phone) }
-    end
   end
 end
