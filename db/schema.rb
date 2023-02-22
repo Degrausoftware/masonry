@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_18_225917) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_22_023803) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,7 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_18_225917) do
     t.string "place_of_birth"
     t.string "relationship"
     t.string "state"
-    t.string "wedding_date"
+    t.date "wedding_date"
     t.date "birth_date"
     t.string "blood_type"
     t.datetime "created_at", null: false

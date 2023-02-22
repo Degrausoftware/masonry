@@ -18,7 +18,7 @@
 #  place_of_birth        :string
 #  relationship          :string
 #  state                 :string
-#  wedding_date          :string
+#  wedding_date          :date
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
 #
