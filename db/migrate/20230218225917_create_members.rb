@@ -14,8 +14,8 @@ class CreateMembers < ActiveRecord::Migration[7.0]
       t.string :place_of_birth
       t.string :relationship
       t.string :state
-      t.string :wedding_date
-      t.string :birth_date
+      t.date :wedding_date
+      t.date :birth_date
       t.string :blood_type
 
       t.timestamps

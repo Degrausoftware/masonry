@@ -3,7 +3,7 @@
 # Table name: members
 #
 #  id                    :bigint           not null, primary key
-#  birth_date            :string
+#  birth_date            :date
 #  blood_type            :string
 #  city                  :string
 #  cpf                   :string
