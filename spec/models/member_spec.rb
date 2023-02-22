@@ -23,10 +23,17 @@
 #  updated_at            :datetime         not null
 #
 require 'rails_helper'
+require 'shoulda/matchers'
 
 describe Member, type: :model do
+  context 'valid member' do
+    it 'create member' do
+      member = FactoryBot.create(:member)
+      expect(member).to be_valid
+    end
+  end
   context 'Validations' do
-    it { is_expected.to  validates_presence_of(:name) }
+    it { should validate_presence_of :name }
     it { is_expected.to  validates_presence_of(:cpf) }
     it { is_expected.to  validates_presence_of(:mobile_phone) }
   end

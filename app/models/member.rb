@@ -24,7 +24,9 @@
 #
 class Member < ApplicationRecord
   has_one_attached :avatar
-  validates :name, :mobile_phone, :cpf, presence: true
+  validates_presence_of :name
+  validates :mobile_phone, presence: true
+  validates :cpf, presence: true
 
   def birth_date
     Date.strptime('03-02-2001', '%d-%m-%Y')
