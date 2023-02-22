@@ -8,10 +8,16 @@ class Backoffice::MembersController < BackofficeController
     # render json: @members
   end
 
+  def profile
+    @members = Member.find_by(:id)
+
+    # render json: @members
+  end
+
   # GET /members/1
   # GET /members/1.json
   def show
-    # render json: @member, include: %i[address apjs]
+    @member = Member.find(params[:id])
   end
 
   # POST /members
@@ -21,7 +27,7 @@ class Backoffice::MembersController < BackofficeController
 
     respond_to do |format|
       if @member.save
-        format.html { redirect_to member_url(@member), notice: "Member was successfully created." }
+        format.html { redirect_to member_url(@member), notice: 'Member was successfully created.' }
         format.json { render :show, status: :created, location: @member }
       else
         format.html { render :new, status: :unprocessable_entity }

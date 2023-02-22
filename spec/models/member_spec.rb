@@ -25,7 +25,6 @@
 require 'rails_helper'
 
 describe Member, type: :model do
-
   context 'Validations' do
     it { is_expected.to  validates_presence_of(:name) }
     it { is_expected.to  validates_presence_of(:cpf) }

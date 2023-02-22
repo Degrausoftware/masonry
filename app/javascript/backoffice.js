@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', event => {
     if (activatedPath) {
         activatedPath = activatedPath[0];
     } else {
-        activatedPath = 'index.html';
+        activatedPath = 'profile.html';
     }
 
     const targetAnchors = document.body.querySelectorAll('[href="' + activatedPath + '"].nav-link');
