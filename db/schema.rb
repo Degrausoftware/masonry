@@ -12,7 +12,6 @@
 
 
 ActiveRecord::Schema[7.0].define(version: 2023_02_21_153456) do
-
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -58,6 +57,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_153456) do
     t.datetime "updated_at", null: false
     t.index ["member_id"], name: "index_sons_on_member_id"
   end
+  create_table "recomendations", force: :cascade do |t|
+    t.boolean "father_mason", default: false
+    t.string "mobile_phone"
+    t.string "name"
+    t.bigint "member_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_recomendations_on_member_id"
+  end
+
 
   add_foreign_key "sons", "members"
   end
@@ -90,6 +99,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_21_153456) do
     t.index ["member_id"], name: "index_sons_on_member_id"
   end
 
+  add_foreign_key "recomendations", "members"
   add_foreign_key "sons", "members"
   end
 
