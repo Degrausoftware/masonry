@@ -37,5 +37,4 @@ describe Member, type: :model do
     it { is_expected.to validate_presence_of(:cpf) }
     it { is_expected.to validate_presence_of(:mobile_phone) }
   end
-  end
 end
