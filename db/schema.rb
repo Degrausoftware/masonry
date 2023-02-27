@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_22_221150) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_25_103335) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -67,6 +67,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_22_221150) do
     t.index ["member_id"], name: "index_sons_on_member_id"
   end
 
+  create_table "university_students", force: :cascade do |t|
+    t.string "cim"
+    t.string "mobile_phone"
+    t.string "name"
+    t.bigint "member_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_university_students_on_member_id"
+  end
+
   create_table "voter_titles", force: :cascade do |t|
     t.string "number"
     t.string "title_city"
@@ -79,5 +89,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_22_221150) do
 
   add_foreign_key "recomendations", "members"
   add_foreign_key "sons", "members"
+  add_foreign_key "university_students", "members"
   add_foreign_key "voter_titles", "members"
 end
