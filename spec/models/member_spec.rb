@@ -33,8 +33,8 @@ describe Member, type: :model do
     end
   end
   context 'Validations' do
-    it { should validate_presence_of :name }
-    it { is_expected.to  validates_presence_of(:cpf) }
-    it { is_expected.to  validates_presence_of(:mobile_phone) }
+    it { is_expected.to validate_presence_of(:name) }
+    it { is_expected.to validate_presence_of(:cpf) }
+    it { is_expected.to validate_presence_of(:mobile_phone) }
   end
 end
