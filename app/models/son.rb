@@ -5,7 +5,7 @@
 #  id         :bigint           not null, primary key
 #  birth_date :date             not null
 #  gender     :string           not null
-#  name_sons  :string           not nullS
+#  name_sons  :string           not null
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  member_id  :bigint           not null
