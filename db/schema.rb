@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_02_211244) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_03_114051) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -55,6 +55,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_211244) do
     t.string "blood_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "personal_references", force: :cascade do |t|
+    t.boolean "mason"
+    t.string "mobile_phone"
+    t.string "name"
+    t.bigint "member_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_personal_references_on_member_id"
   end
 
   create_table "previous_companies", force: :cascade do |t|
@@ -128,6 +138,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_02_211244) do
   end
 
   add_foreign_key "lowtons", "members"
+  add_foreign_key "personal_references", "members"
   add_foreign_key "previous_companies", "members"
   add_foreign_key "questions", "members"
   add_foreign_key "recomendations", "members"
