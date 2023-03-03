@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_01_215332) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_02_211244) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -55,6 +55,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_215332) do
     t.string "blood_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "previous_companies", force: :cascade do |t|
+    t.string "address"
+    t.string "city"
+    t.string "name_company"
+    t.string "neighboarhood"
+    t.string "phone"
+    t.string "state"
+    t.string "what_positio_did_you_hold"
+    t.string "zip_code"
+    t.bigint "member_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_previous_companies_on_member_id"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -113,6 +128,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_215332) do
   end
 
   add_foreign_key "lowtons", "members"
+  add_foreign_key "previous_companies", "members"
   add_foreign_key "questions", "members"
   add_foreign_key "recomendations", "members"
   add_foreign_key "sons", "members"
