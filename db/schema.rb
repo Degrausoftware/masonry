@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_03_114051) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_03_213805) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,26 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_114051) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "jobs", force: :cascade do |t|
+    t.string "address"
+    t.string "carrer"
+    t.string "city"
+    t.string "current_position"
+    t.date "employer"
+    t.string "monthly_net_income"
+    t.string "neihboarhood"
+    t.string "phone"
+    t.string "practice_another_profession"
+    t.date "service_time"
+    t.string "state"
+    t.string "which"
+    t.string "zip_code"
+    t.bigint "member_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_jobs_on_member_id"
   end
 
   create_table "lowtons", force: :cascade do |t|
@@ -137,6 +157,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_03_114051) do
     t.index ["member_id"], name: "index_voter_titles_on_member_id"
   end
 
+  add_foreign_key "jobs", "members"
   add_foreign_key "lowtons", "members"
   add_foreign_key "personal_references", "members"
   add_foreign_key "previous_companies", "members"
