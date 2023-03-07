@@ -14,6 +14,18 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_213708) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "addresses", force: :cascade do |t|
+    t.string "address"
+    t.string "city"
+    t.string "neighborhood"
+    t.string "state"
+    t.string "zip_code"
+    t.bigint "member_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_addresses_on_member_id"
+  end
+
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -195,6 +207,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_213708) do
   end
 
   add_foreign_key "culture_religions", "members"
+  add_foreign_key "addresses", "members"
   add_foreign_key "jobs", "members"
   add_foreign_key "lowtons", "members"
   add_foreign_key "personal_references", "members"
