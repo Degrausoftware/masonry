@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_07_182424) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_07_213708) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -36,6 +36,33 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_182424) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "culture_religions", force: :cascade do |t|
+    t.boolean "admission_freemasonry"
+    t.boolean "admission_freemasonry_family"
+    t.boolean "agreement_with_your_ticket"
+    t.string "city"
+    t.boolean "culture_religious"
+    t.string "expect_about_freemasonry"
+    t.string "financial_admission_boolean"
+    t.string "financial_boolean"
+    t.string "is_the_result"
+    t.boolean "masonic_event"
+    t.string "opinion_about_freemasonry"
+    t.boolean "postulates_of_the_order"
+    t.boolean "practice_religion"
+    t.string "state"
+    t.string "store_wante"
+    t.boolean "supreme_being"
+    t.string "which"
+    t.string "which_1"
+    t.string "which_2"
+    t.boolean "wife_agree_with_your_ticket"
+    t.bigint "member_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_culture_religions_on_member_id"
   end
 
   create_table "jobs", force: :cascade do |t|
@@ -179,6 +206,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_07_182424) do
     t.index ["member_id"], name: "index_wives_on_member_id"
   end
 
+  add_foreign_key "culture_religions", "members"
   add_foreign_key "addresses", "members"
   add_foreign_key "jobs", "members"
   add_foreign_key "lowtons", "members"
