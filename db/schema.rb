@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_09_103742) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_14_103353) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -24,6 +24,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_103742) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+  end
+
+  create_table "card_identities", force: :cascade do |t|
+    t.date "issue_date"
+    t.string "issung_agency"
+    t.string "number_identity"
+    t.bigint "member_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["member_id"], name: "index_card_identities_on_member_id"
   end
 
   create_table "culture_religions", force: :cascade do |t|
@@ -204,6 +214,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_09_103742) do
     t.index ["member_id"], name: "index_wives_on_member_id"
   end
 
+  add_foreign_key "card_identities", "members"
   add_foreign_key "culture_religions", "members"
   add_foreign_key "demolays", "members"
   add_foreign_key "jobs", "members"
