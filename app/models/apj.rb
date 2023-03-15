@@ -1,0 +1,2 @@
+class Apj < ApplicationRecord
+end
