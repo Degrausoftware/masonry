@@ -5,13 +5,13 @@ class Backoffice::MembersController < BackofficeController
   def index
     @members = Member.all
 
-    # render json: @members
+     render json: @members
   end
 
   def profile
     @members = Member.find_by(:id)
 
-    # render json: @members
+    render json: @members
   end
 
   # GET /members/1
