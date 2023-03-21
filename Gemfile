@@ -65,7 +65,6 @@ group :development, :test do
   gem 'binding_of_caller', '~> 1.0'
   gem 'brakeman', '~> 5.2'
   gem 'capybara'
-  gem 'database_cleaner'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry', '~> 0.14.1'
