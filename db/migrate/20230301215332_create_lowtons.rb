@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateLowtons < ActiveRecord::Migration[7.0]
   def change
     create_table :lowtons do |t|

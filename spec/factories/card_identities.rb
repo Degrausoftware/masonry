@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: card_identities
@@ -26,9 +28,3 @@ FactoryBot.define do
     member
   end
 end
-
-
-
-
-
-

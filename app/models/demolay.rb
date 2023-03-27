@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: demolays
@@ -19,7 +21,7 @@
 #  fk_rails_...  (member_id => members.id)
 #
 class Demolay < ApplicationRecord
-  validates :cim, :mobile_phone, :name,  presence: true
+  validates :cim, :mobile_phone, :name, presence: true
 
   belongs_to :member
 end

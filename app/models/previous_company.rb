@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: previous_companies
@@ -24,7 +26,8 @@
 #  fk_rails_...  (member_id => members.id)
 #
 class PreviousCompany < ApplicationRecord
-  validates :address, :city, :name_company, :neighboarhood, :phone, :state, :what_positio_did_you_hold, :zip_code,  presence: true
+  validates :address, :city, :name_company, :neighboarhood, :phone, :state, :what_positio_did_you_hold, :zip_code,
+            presence: true
 
   belongs_to :member
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: personal_references
@@ -20,9 +22,9 @@
 #
 FactoryBot.define do
   factory :personal_reference do
-    mason { [true,false].sample }
+    mason { [true, false].sample }
     mobile_phone { Faker::PhoneNumber.cell_phone_with_country_code }
-    name { Faker::Name.name}
+    name { Faker::Name.name }
     member
   end
 end

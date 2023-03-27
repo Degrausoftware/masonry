@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: jobs
@@ -29,8 +31,9 @@
 #  fk_rails_...  (member_id => members.id)
 #
 class Job < ApplicationRecord
-  validates :address, :carrer, :city, :current_position, :employer, :monthly_net_income,  presence: true
-  validates :neihboarhood, :phone, :practice_another_profession, :service_time, :state, :which, :zip_code,  presence: true
+  validates :address, :carrer, :city, :current_position, :employer, :monthly_net_income, presence: true
+  validates :neihboarhood, :phone, :practice_another_profession, :service_time, :state, :which, :zip_code,
+            presence: true
 
   belongs_to :member
 end

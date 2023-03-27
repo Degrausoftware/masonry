@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: personal_references
@@ -19,6 +21,6 @@
 #  fk_rails_...  (member_id => members.id)
 #
 class PersonalReference < ApplicationRecord
-  validates :mason, :mobile_phone, :name,  presence: true
+  validates :mason, :mobile_phone, :name, presence: true
   belongs_to :member
 end

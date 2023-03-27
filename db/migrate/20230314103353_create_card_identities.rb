@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateCardIdentities < ActiveRecord::Migration[7.0]
   def change
     create_table :card_identities do |t|

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreatePersonalReferences < ActiveRecord::Migration[7.0]
   def change
     create_table :personal_references do |t|

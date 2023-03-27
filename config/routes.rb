@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   namespace :backoffice do
     resources :members do
+      # get :profile, on: :collection
     end
     get 'dashbaord', to: 'dashboard#index'
   end

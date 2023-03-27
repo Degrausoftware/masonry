@@ -1,68 +1,72 @@
-class Backoffice::MembersController < BackofficeController
-  before_action :set_member, only: %i[show update destroy]
-  # GET /members
-  # GET /members.json
-  def index
-    @members = Member.all
+# frozen_string_literal: true
 
-     render json: @members
-  end
+module Backoffice
+  class MembersController < BackofficeController
+    before_action :set_member, only: %i[show update destroy]
+    # GET /members
+    # GET /members.json
+    def index
+      @members = Member.all
 
-  def profile
-    @members = Member.find_by(:id)
+      render json: @members
+    end
 
-    render json: @members
-  end
+    def profile
+      @members = Member.find(params[:id])
 
-  # GET /members/1
-  # GET /members/1.json
-  def show
-    @member = Member.find(params[:id])
-  end
+      # render json: @members
+    end
 
-  # POST /members
-  # POST /members.json
-  def create
-    @member = Member.new(member_params)
+    # GET /members/1
+    # GET /members/1.json
+    def show
+      @member = Member.find(params[:id])
+    end
 
-    respond_to do |format|
-      if @member.save
-        format.html { redirect_to member_url(@member), notice: 'Member was successfully created.' }
-        format.json { render :show, status: :created, location: @member }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @member.errors, status: :unprocessable_entity }
+    # POST /members
+    # POST /members.json
+    def create
+      @member = Member.new(member_params)
+
+      respond_to do |format|
+        if @member.save
+          format.html { redirect_to member_url(@member), notice: 'Member was successfully created.' }
+          format.json { render :show, status: :created, location: @member }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @member.errors, status: :unprocessable_entity }
+        end
       end
     end
-  end
 
-  # PATCH/PUT /members/1
-  # PATCH/PUT /members/1.json
-  def update
-    if @member.update(member_params)
-      render :show, include: %i[address apjs], status: :ok, location: @member
-    else
-      render json: @member.errors, status: :unprocessable_entity
+    # PATCH/PUT /members/1
+    # PATCH/PUT /members/1.json
+    def update
+      if @member.update(member_params)
+        render :show, include: %i[address apjs], status: :ok, location: @member
+      else
+        render json: @member.errors, status: :unprocessable_entity
+      end
     end
-  end
 
-  # DELETE /members/1
-  # DELETE /members/1.json
-  def destroy
-    @member.destroy
-  end
+    # DELETE /members/1
+    # DELETE /members/1.json
+    def destroy
+      @member.destroy
+    end
 
-  private
+    private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_member
-    @member = Member.find(params[:id])
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_member
+      @member = Member.find(params[:id])
+    end
 
-  # Only allow a list of trusted parameters through.
-  def member_params
-    params.require(:member).permit(:name, :birth_date, :place_of_birth, :state, :nationality, :city, :phone,
-                                   :mobile_phone, :email, :relationship, :wedding_date, :blood_type, :fathers_name,
-                                   :mothers_name, :cpf, :degree_of_instruction, :avatar)
+    # Only allow a list of trusted parameters through.
+    def member_params
+      params.require(:member).permit(:name, :birth_date, :place_of_birth, :state, :nationality, :city, :phone,
+                                     :mobile_phone, :email, :relationship, :wedding_date, :blood_type, :fathers_name,
+                                     :mothers_name, :cpf, :degree_of_instruction, :avatar)
+    end
   end
 end

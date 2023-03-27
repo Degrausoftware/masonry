@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: wives
@@ -19,7 +21,6 @@
 #  fk_rails_...  (member_id => members.id)
 #
 require 'rails_helper'
-
 
 RSpec.describe Wife, type: :model do
   it 'is valid all attributes' do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: questions
@@ -24,7 +26,7 @@
 #  fk_rails_...  (member_id => members.id)
 #
 class Question < ApplicationRecord
-  validates :addiction, :debauchery, :equality, :ethical, :fraternity, :freedom, :toxic, :virtue,  presence: true
+  validates :addiction, :debauchery, :equality, :ethical, :fraternity, :freedom, :toxic, :virtue, presence: true
 
   belongs_to :member
 end
