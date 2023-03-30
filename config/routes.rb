@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :members do
       # get :profile, on: :collection
     end
-    get 'dashbaord', to: 'dashboard#index'
+    get 'dashboard', to: 'dashboard#index'
   end
   devise_for :admins
   root 'backoffice/dashboard#index'
