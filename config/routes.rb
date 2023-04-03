@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     end
     get 'dashboard', to: 'dashboard#index'
   end
-  devise_for :admins
   root 'backoffice/dashboard#index'
+  devise_for :admins
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
