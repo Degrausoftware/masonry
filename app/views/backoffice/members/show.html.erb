@@ -41,13 +41,13 @@
           <div class="card-body">
             <form>
               <!-- Form Row-->
-              <% @members.each do |member| %>
+            
                 <div class="row gx-3 mb-3">
                   <!-- Form Group (first name)-->
                   <div class="md-3">
                     <label class="small mb-1 fw-bolder" for="inputFirstName">Nome Completo</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.id %></div>
-                    <div class="bg-light border p-3 mb-3"><%= member.name %></div>
+                    
+                    <div class="bg-light border p-3 mb-3"><%= @member.name %></div>
                   </div>
                 </div>
                 <!-- Form Row        -->
@@ -55,74 +55,75 @@
                   <!-- Form Group (organization name)-->
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputOrgName">Data de Nascimento</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.birth_date %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.birth_date %></div>
                   </div>
                   <!-- Form Group (location)-->
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputLocation">CPF</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.cpf %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.cpf %></div>
                   </div>
                 </div>
                 <!-- Form Group (email address)-->
                 <div class="mb-3">
                   <label class="small mb-1 fw-bolder" for="inputEmailAddress">Email</label>
-                  <div class="bg-light border p-3 mb-3"><%= member.email %></div>
+                  <div class="bg-light border p-3 mb-3"><%= @member.email %></div>
                 </div>
                 <!-- Form Row-->
                 <div class="row gx-3 mb-3">
                   <!-- Form Group (phone number)-->
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputPhone">Telefone</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.phone %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.phone %></div>
                   </div>
                   <!-- Form Group (birthday)-->
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Celular</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.mobile_phone %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.mobile_phone %></div>
                   </div>
 
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Nome do Pai</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.fathers_name %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.fathers_name %></div>
                   </div>
 
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Nome da Mãe</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.mothers_name %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.mothers_name %></div>
                   </div>
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Local de nascimento</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.place_of_birth %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.place_of_birth %></div>
                   </div>
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Nacionalidade</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.nationality %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.nationality %></div>
                   </div>
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Estado</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.state %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.state %></div>
                   </div>
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Estado Civil</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.relationship %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.relationship %></div>
                   </div>
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Tipo sanguinio</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.blood_type %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.blood_type %></div>
                   </div>
 
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Escolaridade</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.degree_of_instruction %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.degree_of_instruction %></div>
                   </div>
 
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Data do casamento</label>
-                    <div class="bg-light border p-3 mb-3"><%= member.wedding_date %></div>
+                    <div class="bg-light border p-3 mb-3"><%= @member.wedding_date %></div>
                   </div>
 
                 </div>
-              <% end %>  <!-- Save changes button-->
+             
+              <!-- Save changes button-->
             </form>
           </div>
         </div>

@@ -2,17 +2,11 @@
 
 module Backoffice
   class MembersController < BackofficeController
-    before_action :set_member, only: %i[show update destroy]
+    before_action :set_member, only: %i[ update destroy]
     # GET /members
     # GET /members.json
     def index
       @members = Member.all
-
-      render json: @members
-    end
-
-    def profile
-      @members = Member.find(params[:id])
 
       # render json: @members
     end
@@ -21,6 +15,7 @@ module Backoffice
     # GET /members/1.json
     def show
       @member = Member.find(params[:id])
+      # 
     end
 
     # POST /members
@@ -67,6 +62,7 @@ module Backoffice
       params.require(:member).permit(:name, :birth_date, :place_of_birth, :state, :nationality, :city, :phone,
                                      :mobile_phone, :email, :relationship, :wedding_date, :blood_type, :fathers_name,
                                      :mothers_name, :cpf, :degree_of_instruction, :avatar)
+                                     binding.pry
     end
   end
 end

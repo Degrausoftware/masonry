@@ -3,7 +3,6 @@
 Rails.application.routes.draw do
   namespace :backoffice do
     resources :members do
-      # get :profile, on: :collection
     end
     get 'dashboard', to: 'dashboard#index'
   end
