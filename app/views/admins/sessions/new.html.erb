@@ -50,7 +50,11 @@
                         <%= f.password_field :password, autocomplete: "current-password", class: "form-control form-control-solid", placeholder: "", "aria-label" => "Password", "aria-describedby" => "password" %>
                       </div>
                       <!-- Form Group (forgot password link)-->
-                      <div class="mb-3"><a class="small" href="auth-password-social.html">Forgot your password?</a></div>
+                      <div class="mb-3">
+                        <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+                          <%= link_to "Forgot your password?", new_password_path(resource_name) %><br />
+                        <% end %>
+                      </div>
                       <!-- Form Group (login box)-->
                       <div class="d-flex align-items-center justify-content-between mb-0">
                         <div class="form-check">
