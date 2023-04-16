@@ -18,6 +18,11 @@ module Backoffice
       # 
     end
 
+    def profile
+      @member = Member.find(params[:id])
+        # 
+    end
+
     # POST /members
     # POST /members.json
     def create

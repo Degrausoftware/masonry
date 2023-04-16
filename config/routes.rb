@@ -2,9 +2,8 @@
 
 Rails.application.routes.draw do
   namespace :backoffice do
-    resources :members do
-      get '/backoffice/members/:id', to: 'backoffice/members#show', as:'member'
-    end
+    resources :members, only: [:show]
+    
   end
   root 'backoffice/dashboard#index'
   devise_for :admins
