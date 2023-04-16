@@ -2,7 +2,10 @@
 
 Rails.application.routes.draw do
   namespace :backoffice do
-    resources :members, only: [:show]
+    resources :members do
+      get 'show'
+      get 'address'
+  end
     
   end
   root 'backoffice/dashboard#index'

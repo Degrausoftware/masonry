@@ -15,6 +15,7 @@ module Backoffice
     # GET /members/1.json
     def show
       @member = Member.find(params[:id])
+      @address = Address.all
       # 
     end
 
