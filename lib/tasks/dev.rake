@@ -29,6 +29,22 @@ namespace :dev do
         degree_of_instruction: Faker::Educator.degree
       )
     end
-    puts '******************apj***************************'
+    puts "*******************Son**************************"
+    Member.all.each do |member|
+      Son.create!(
+        birth_date: Faker::Date.birthday(min_age: 18, max_age: 65),
+        gender: Faker::Gender.binary_type,
+        name_sons: Faker::FunnyName.name,   
+        member_id: member.id
+        
+        # address: Faker::Address.street_address,
+        # neighborhood: Faker::Address.community,
+        # city: Faker::Address.city,
+        # state: Faker::Address.state,
+        # zip_code: Faker::Address.zip_code,
+        # member: member_id
+      )
+
+    end
   end
 end

@@ -6,6 +6,7 @@ module Backoffice
     def index
       @admins = Admin.all
       @member = Member.count
+      @son = Son.count
     end
   end
 end

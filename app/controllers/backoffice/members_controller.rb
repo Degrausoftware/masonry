@@ -15,13 +15,16 @@ module Backoffice
     # GET /members/1.json
     def show
       @member = Member.find(params[:id])
-      @address = Address.all
       # 
     end
 
-    def profile
-      @member = Member.find(params[:id])
-        # 
+    def account_profile
+      @member = Member.find(params[:member_id])
+    end
+
+    def son_profile
+      @son = Son.find(params[:member_id])
+
     end
 
     # POST /members

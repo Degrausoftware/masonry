@@ -3,8 +3,8 @@
 Rails.application.routes.draw do
   namespace :backoffice do
     resources :members do
-      get 'show'
-      get 'address'
+      get 'account_profile', to: 'members#account_profile'
+      get 'son_profile', to: 'members#son_profile'
   end
     
   end

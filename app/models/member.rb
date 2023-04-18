@@ -25,6 +25,7 @@
 #  updated_at            :datetime         not null
 #
 class Member < ApplicationRecord
+  has_one :son
   has_one_attached :avatar
   validates_presence_of :name
   validates :mobile_phone, presence: true
