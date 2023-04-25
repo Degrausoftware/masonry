@@ -1,0 +1,2 @@
+class MasonicLodge < ApplicationRecord
+end
