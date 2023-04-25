@@ -14,7 +14,7 @@ class CreateMasonicLodges < ActiveRecord::Migration[7.0]
       t.string :email
       t.string :web_site
       t.string :rite
-      t.string :meeting
+      t.date :meeting
       t.string :pontency
       t.string :store_number
       t.string :venerable
