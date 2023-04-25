@@ -10,9 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_21_140642) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_25_121640) do
   # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+  enable_extension 'plpgsql'
 
   create_table "addresses", force: :cascade do |t|
     t.string "address"
@@ -137,6 +137,34 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_140642) do
     t.index ["member_id"], name: "index_lowtons_on_member_id"
   end
 
+  create_table "masonic_lodges", force: :cascade do |t|
+    t.string "name"
+    t.string "address"
+    t.string "correspoding_address"
+    t.string "city"
+    t.string "state"
+    t.string "nationality"
+    t.string "code_zip"
+    t.string "mobile_phone"
+    t.string "phone"
+    t.string "responsible"
+    t.string "email"
+    t.string "web_site"
+    t.string "rite"
+    t.string "meeting"
+    t.string "pontency"
+    t.string "store_number"
+    t.string "venerable"
+    t.string "note"
+    t.string "blazon"
+    t.string "decree_creation_of_the_store"
+    t.string "country"
+    t.date "founding_date"
+    t.string "cnpj"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "members", force: :cascade do |t|
     t.string "city"
     t.string "cpf"
@@ -208,6 +236,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_21_140642) do
     t.index ["member_id"], name: "index_recomendations_on_member_id"
   end
 
+  add_foreign_key "sons", "members"
+  end
+
+  create_table 'members', force: :cascade do |t|
+    t.string 'city'
+    t.string 'cpf'
+    t.string 'degree_of_instruction'
+    t.string 'email'
+    t.string 'fathers_name'
+    t.string 'mobile_phone'
+    t.string 'mothers_name'
+    t.string 'name'
+    t.string 'nationality'
+    t.string 'phone'
+    t.string 'place_of_birth'
+    t.string 'relationship'
+    t.string 'state'
+    t.string 'wedding_date'
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
+  end
   create_table "sons", force: :cascade do |t|
     t.date "birth_date", null: false
     t.string "gender", null: false
