@@ -29,3 +29,4 @@ rspec
 
 * Member Modeling
   [Modeling for model](https://github.com/Degrausoftware/masonry/blob/main/erd.pdf)
+  [Modeling for model Lodges](https://github.com/Degrausoftware/masonry/blob/release/v0.1/Screenshot_from_2023-04-13_16-38-07.png)
