@@ -15,7 +15,6 @@ module Backoffice
     # GET /members/1.json
     def show
       @member = Member.find(params[:id])
-      # 
     end
 
     def account_profile
