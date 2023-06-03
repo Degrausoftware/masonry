@@ -13,7 +13,7 @@
 #  decree_creation_of_the_store :string
 #  email                        :string
 #  founding_date                :date
-#  meeting                      :string
+#  meeting                      :date
 #  mobile_phone                 :string
 #  name                         :string
 #  nationality                  :string

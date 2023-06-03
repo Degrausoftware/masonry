@@ -2,6 +2,7 @@
 
 Rails.application.routes.draw do
   namespace :backoffice do
+    get 'masonic_lodges/index'
     resources :members do
       get 'account_profile', to: 'members#account_profile'
       get 'son_profile', to: 'members#son_profile'

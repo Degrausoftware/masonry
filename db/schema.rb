@@ -151,7 +151,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_25_121640) do
     t.string "email"
     t.string "web_site"
     t.string "rite"
-    t.string "meeting"
+    t.date "meeting"
     t.string "pontency"
     t.string "store_number"
     t.string "venerable"
