@@ -70,7 +70,6 @@ module Backoffice
       params.require(:member).permit(:name, :birth_date, :place_of_birth, :state, :nationality, :city, :phone,
                                      :mobile_phone, :email, :relationship, :wedding_date, :blood_type, :fathers_name,
                                      :mothers_name, :cpf, :degree_of_instruction, :avatar)
-                                     binding.pry
     end
   end
 end

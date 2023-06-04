@@ -7,6 +7,10 @@ class Backoffice::MasonicLodgesController < BackofficeController
     @masonic_lodges = MasonicLodge.find(params[:id])
   end
 
+  def profile
+    @masonic_lodges = MasonicLodge.find(params[:masonic_lodges_id])
+  end
+
   def create
 
   end

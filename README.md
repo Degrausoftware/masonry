@@ -14,10 +14,9 @@ All Masonry development is being test-driven, following the Test-Driven Developm
 
 In this way, we are building Masonry solidly, reliably and with a focus on code quality and the satisfaction of Masonic lodge users.
 
-## Informações para roda local a aplicação
 
 
-
+## Information for start local app
 * Ruby version
 ```ruby
  3.2.0
@@ -29,8 +28,9 @@ In this way, we are building Masonry solidly, reliably and with a focus on code 
 * Database creation
   se preferir manual
 ````ruby
-* rails db:drop db:create db:migrate
+* rails db:drop db:create db:migrate db:seed
 ````
+
 * Database initialization
 
 * How to run the test suite
