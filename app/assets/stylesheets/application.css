@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+.topnav.navbar-dark #sidebarToggle {
+    color: rgba(255, 255, 255, 0.5);
+}
+.topnav.navbar-dark .navbar-brand {
+    color: #fff;
+}
+.topnav.navbar-light #sidebarToggle {
+    color: #212832;
+}
+.topnav.navbar-light .navbar-brand {
+    color: #363d47;
+}

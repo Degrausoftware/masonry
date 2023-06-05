@@ -178,7 +178,7 @@
           </a>
           <div class="collapse" id="collapseStore" data-bs-parent="#accordionSidenav">
             <nav class="sidenav-menu-nested nav">
-              <%= link_to 'Dados da Loja', backoffice_masonic_lodges_index_path, class: "nav-link" %>
+              <%= link_to 'Dados da Loja', class: "nav-link" %>
               <a class="nav-link" href="wizard.html">Wizard</a>
             </nav>
           </div>
@@ -198,8 +198,8 @@
               <div class="collapse" id="pagesCollapseAccount" data-bs-parent="#accordionSidenavPagesMenu">
                 <nav class="sidenav-menu-nested nav">
                 
-<!--                <a><%#= link_to 'membro', backoffice_member_account_profile_path(@member), class: "nav-link" %></a>-->
-<!--                   <a><%#= link_to 'Sobrinhos', backoffice_member_son_profile_path(@member, @son), class: "nav-link" %></a>-->
+                <a><%= link_to 'membro', backoffice_member_account_profile_path(@member), class: "nav-link" %></a>
+                   <a><%= link_to 'Sobrinhos', backoffice_member_son_profile_path(@member, @son), class: "nav-link" %></a>
                   <a class="nav-link" href="account-security.html">familia</a>
                   <a class="nav-link" href="account-notifications.html">historico</a>
                 </nav>
