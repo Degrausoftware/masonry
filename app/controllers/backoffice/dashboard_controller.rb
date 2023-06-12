@@ -8,5 +8,14 @@ module Backoffice
       @member = Member.count
       @son = Son.count
     end
+
+    def redirect_to(root_path, notice:)
+      # code here
+    end
+
+    def destroy
+      session[:admin_id] = nil
+      redirect_to root_path, notice: "Sai porra"
+    end
   end
 end

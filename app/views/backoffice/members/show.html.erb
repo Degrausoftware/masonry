@@ -41,13 +41,21 @@
           <div class="card-body">
             <form>
               <!-- Form Row-->
+<<<<<<< HEAD
             
+=======
+              <% @members.each do |member| %>
+>>>>>>> main
                 <div class="row gx-3 mb-3">
                   <!-- Form Group (first name)-->
                   <div class="md-3">
                     <label class="small mb-1 fw-bolder" for="inputFirstName">Nome Completo</label>
+<<<<<<< HEAD
                     
                     <div class="bg-light border p-3 mb-3"><%= @member.name %></div>
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.name %></div>
+>>>>>>> main
                   </div>
                 </div>
                 <!-- Form Row        -->
@@ -55,39 +63,64 @@
                   <!-- Form Group (organization name)-->
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputOrgName">Data de Nascimento</label>
+<<<<<<< HEAD
                     <div class="bg-light border p-3 mb-3"><%= @member.birth_date %></div>
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.birth_date %></div>
+>>>>>>> main
                   </div>
                   <!-- Form Group (location)-->
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputLocation">CPF</label>
+<<<<<<< HEAD
                     <div class="bg-light border p-3 mb-3"><%= @member.cpf %></div>
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.cpf %></div>
+>>>>>>> main
                   </div>
                 </div>
                 <!-- Form Group (email address)-->
                 <div class="mb-3">
                   <label class="small mb-1 fw-bolder" for="inputEmailAddress">Email</label>
+<<<<<<< HEAD
                   <div class="bg-light border p-3 mb-3"><%= @member.email %></div>
+=======
+                  <div class="bg-light border p-3 mb-3"><%= member.email %></div>
+>>>>>>> main
                 </div>
                 <!-- Form Row-->
                 <div class="row gx-3 mb-3">
                   <!-- Form Group (phone number)-->
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputPhone">Telefone</label>
+<<<<<<< HEAD
                     <div class="bg-light border p-3 mb-3"><%= @member.phone %></div>
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.phone %></div>
+>>>>>>> main
                   </div>
                   <!-- Form Group (birthday)-->
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Celular</label>
+<<<<<<< HEAD
                     <div class="bg-light border p-3 mb-3"><%= @member.mobile_phone %></div>
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.mobile_phone %></div>
+>>>>>>> main
                   </div>
 
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Nome do Pai</label>
+<<<<<<< HEAD
                     <div class="bg-light border p-3 mb-3"><%= @member.fathers_name %></div>
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.fathers_name %></div>
+>>>>>>> main
                   </div>
 
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Nome da Mãe</label>
+<<<<<<< HEAD
                     <div class="bg-light border p-3 mb-3"><%= @member.mothers_name %></div>
                   </div>
                   <div class="col-md-6">
@@ -109,15 +142,43 @@
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Tipo sanguinio</label>
                     <div class="bg-light border p-3 mb-3"><%= @member.blood_type %></div>
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.mothers_name %></div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1 fw-bolder" for="inputBirthday">Local de nascimento</label>
+                    <div class="bg-light border p-3 mb-3"><%= member.place_of_birth %></div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1 fw-bolder" for="inputBirthday">Nacionalidade</label>
+                    <div class="bg-light border p-3 mb-3"><%= member.nationality %></div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1 fw-bolder" for="inputBirthday">Estado</label>
+                    <div class="bg-light border p-3 mb-3"><%= member.state %></div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1 fw-bolder" for="inputBirthday">Estado Civil</label>
+                    <div class="bg-light border p-3 mb-3"><%= member.relationship %></div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="small mb-1 fw-bolder" for="inputBirthday">Tipo sanguinio</label>
+                    <div class="bg-light border p-3 mb-3"><%= member.blood_type %></div>
+>>>>>>> main
                   </div>
 
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Escolaridade</label>
+<<<<<<< HEAD
                     <div class="bg-light border p-3 mb-3"><%= @member.degree_of_instruction %></div>
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.degree_of_instruction %></div>
+>>>>>>> main
                   </div>
 
                   <div class="col-md-6">
                     <label class="small mb-1 fw-bolder" for="inputBirthday">Data do casamento</label>
+<<<<<<< HEAD
                     <div class="bg-light border p-3 mb-3"><%= @member.wedding_date %></div>
                   </div>
 
@@ -126,6 +187,14 @@
               <!-- Save changes button-->
             </form>
             
+=======
+                    <div class="bg-light border p-3 mb-3"><%= member.wedding_date %></div>
+                  </div>
+
+                </div>
+              <% end %>  <!-- Save changes button-->
+            </form>
+>>>>>>> main
           </div>
         </div>
       </div>
