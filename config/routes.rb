@@ -2,6 +2,8 @@
 
 Rails.application.routes.draw do
   namespace :backoffice do
+    delete '/logout', to: '/session#destroy'
+
     resources :masonic_lodges do
       get 'profile', to: 'masonic_lodges#profile'
     end
