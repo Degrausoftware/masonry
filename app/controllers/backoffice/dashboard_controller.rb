@@ -5,6 +5,7 @@ module Backoffice
     before_action :set_admin, only: %i[edit update]
     def index
       @admins = Admin.all
+      @masonic_lodges = MasonicLodge.limit(10)
       @member = Member.count
       @son = Son.count
     end

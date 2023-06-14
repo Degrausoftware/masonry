@@ -38,12 +38,13 @@
             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPagesMenu">
               <!-- Nested Sidenav Accordion (Pages -> Account)-->
               <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAccount" aria-expanded="false" aria-controls="pagesCollapseAccount">
-                Obreiros
+                Dados da Loja
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
               </a>
               <div class="collapse" id="pagesCollapseAccount" data-bs-parent="#accordionSidenavPagesMenu">
                 <nav class="sidenav-menu-nested nav">
-                  <a class="nav-link" href="account-profile.html">Profile</a>
+                  <a><%= link_to 'Loja', backoffice_masonic_lodges_path, class: "nav-link" %></a>
+                  <a class="nav-link" href="account-profile.html">Cadastro</a>
                   <a class="nav-link" href="account-billing.html">Billing</a>
                   <a class="nav-link" href="account-security.html">Security</a>
                   <a class="nav-link" href="account-notifications.html">Notifications</a>
@@ -119,7 +120,7 @@
           <!-- Sidenav Accordion (Flows)-->
           <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapseFlows" aria-expanded="false" aria-controls="collapseFlows">
             <div class="nav-link-icon"><i data-feather="repeat"></i></div>
-            Obreiros
+            Dados da Loja
             <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
           </a>
           <div class="collapse" id="collapseFlows" data-bs-parent="#accordionSidenav">

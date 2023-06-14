@@ -8,7 +8,7 @@ class Backoffice::MasonicLodgesController < BackofficeController
   end
 
   def profile
-    @masonic_lodges = MasonicLodge.find(params[:masonic_lodges_id])
+    @masonic_lodges = MasonicLodge.find.masonic_lodges_id(params[:masonic_lodges_id])
   end
 
   def create
@@ -24,4 +24,10 @@ class Backoffice::MasonicLodgesController < BackofficeController
 
   private
 
+  def masonicLodges_params
+    params.require(:masonic_lodges).permit(:address, :blazon, :city, :cnpj, :code_zip, :correspoding_address,
+                                           :country, :decree_creation_of_the_store, :email, :founding_date, :meeting,
+                                           :mobile_phone, :name, :nationality, :note, :phone, :pontency, :responsible,
+                                           :rite, :state, :store_number, :venerable, :web_site)
+  end
 end
