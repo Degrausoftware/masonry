@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 # frozen_string_literal: true
 
-=======
->>>>>>> main
 require 'rails_helper'
 
 RSpec.describe 'Backoffice::Members', type: :request do
