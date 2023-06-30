@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  namespace :api do
+    namespace :v1 do
+      resources :members
+    end
+  end
+
   namespace :backoffice do
     delete '/logout', to: '/session#destroy'
 
@@ -10,8 +16,7 @@ Rails.application.routes.draw do
     resources :members do
       get 'account_profile', to: 'members#account_profile'
       get 'son_profile', to: 'members#son_profile'
-  end
-    
+    end
   end
   root 'backoffice/dashboard#index'
   devise_for :admins

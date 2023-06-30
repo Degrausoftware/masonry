@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: masonic_lodges
@@ -32,8 +34,8 @@
 FactoryBot.define do
   factory :masonic_lodge do
     name { Faker::Name.name }
-    address {  Faker::Address.street_address }
-    correspoding_address {  Faker::Address.street_address }
+    address { Faker::Address.street_address }
+    correspoding_address { Faker::Address.street_address }
     city { Faker::Address.city }
     state { Faker::Address.state }
     nationality { Faker::Nation.nationality }
@@ -49,7 +51,7 @@ FactoryBot.define do
     store_number { Faker::Number.number(digits: 2) }
     venerable { Faker::Name.name }
     note { Faker::Lorem.paragraph_by_chars(number: 256, supplemental: false) }
-    blazon { "MyString" }
+    blazon { 'MyString' }
     decree_creation_of_the_store { 1000.days.from_now }
     country { Faker::Nation.nationality }
     founding_date { Faker::Date.between(from: '2014-09-23', to: '2014-09-25') }

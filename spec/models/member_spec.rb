@@ -5,6 +5,7 @@
 # Table name: members
 #
 #  id                    :bigint           not null, primary key
+#  admin                 :boolean
 #  birth_date            :date
 #  blood_type            :string
 #  city                  :string
