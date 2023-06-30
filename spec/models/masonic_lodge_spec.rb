@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: masonic_lodges
@@ -33,8 +35,8 @@ require 'rails_helper'
 # require 'should/matchers'
 
 describe MasonicLodge, type: :model do
-  context 'valid masoniclodge' do 
-    it 'create masonic_lodge' do 
+  context 'valid masoniclodge' do
+    it 'create masonic_lodge' do
       masonic_lodge = FactoryBot.create(:masonic_lodge)
       expect(masonic_lodge).to be_valid
     end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: masonic_lodges
@@ -34,5 +36,4 @@ class MasonicLodge < ApplicationRecord
   validates_presence_of :address
   validates_presence_of :cnpj
   validates_presence_of :city
-
 end

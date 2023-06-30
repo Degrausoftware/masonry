@@ -16,7 +16,7 @@ module Backoffice
 
     def destroy
       session[:admin_id] = nil
-      redirect_to root_path, notice: "Sai porra"
+      redirect_to root_path, notice: 'Sai porra'
     end
   end
 end

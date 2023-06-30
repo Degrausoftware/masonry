@@ -2,7 +2,7 @@
 
 module Backoffice
   class MembersController < BackofficeController
-    before_action :set_member, only: %i[ update destroy]
+    before_action :set_member, only: %i[update destroy]
     # GET /members
     # GET /members.json
     def index
@@ -23,7 +23,6 @@ module Backoffice
 
     def son_profile
       @son = Son.find(params[:member_id])
-
     end
 
     # POST /members
