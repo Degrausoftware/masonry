@@ -6,6 +6,7 @@ module Api
         @members = Member.all
         render json: @members
       end
+      
     end
   end
 end

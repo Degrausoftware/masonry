@@ -24,6 +24,15 @@
 #  wedding_date          :date
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  masonic_lodge_id      :bigint           not null
+#
+# Indexes
+#
+#  index_members_on_masonic_lodge_id  (masonic_lodge_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (masonic_lodge_id => masonic_lodges.id)
 #
 require 'rails_helper'
 require 'shoulda/matchers'

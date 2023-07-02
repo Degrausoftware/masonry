@@ -24,12 +24,24 @@
 #  wedding_date          :date
 #  created_at            :datetime         not null
 #  updated_at            :datetime         not null
+#  masonic_lodge_id      :bigint           not null
+#
+# Indexes
+#
+#  index_members_on_masonic_lodge_id  (masonic_lodge_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (masonic_lodge_id => masonic_lodges.id)
 #
 class Member < ApplicationRecord
+  belongs_to :masonic_lodge
   has_one :son
   has_one_attached :avatar
   validates_presence_of :name
   validates :mobile_phone, presence: true
+  # validades_presence_of :masonic_lodge_id
+  
   # validates_presence_of :cpf, unless: :skip_cpf_validation, on: :create
   # validate :validate_cpf, unless: :skip_cpf_validation, on: [ :create, :update ], if: -> { cpf.present? }
   # validates :cpf, uniqueness: true, allow_nil: true, on: [ :create, :update ], if: -> { cpf.present? }

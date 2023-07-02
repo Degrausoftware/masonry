@@ -32,6 +32,7 @@
 #  updated_at                   :datetime         not null
 #
 class MasonicLodge < ApplicationRecord
+  has_many :members
   validates_presence_of :email
   validates_presence_of :address
   validates_presence_of :cnpj
