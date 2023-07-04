@@ -13,9 +13,10 @@
 #  correspoding_address         :string
 #  country                      :string
 #  decree_creation_of_the_store :string
+#  district                     :string
 #  email                        :string
 #  founding_date                :date
-#  meeting                      :date
+#  meeting                      :string
 #  mobile_phone                 :string
 #  name                         :string
 #  nationality                  :string

@@ -12,6 +12,7 @@ namespace :dev do
       MasonicLodge.create!(
         name: Faker::Name.name,
         address: Faker::Address.street_address,
+        district: Faker::Address.community,
         correspoding_address: Faker::Address.street_address,
         city: Faker::Address.city,
         state: Faker::Address.state,

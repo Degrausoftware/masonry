@@ -43,7 +43,7 @@
               </a>
               <div class="collapse" id="pagesCollapseAccount" data-bs-parent="#accordionSidenavPagesMenu">
                 <nav class="sidenav-menu-nested nav">
-                  <a><#%= link_to 'Loja', backoffice_masonic_lodge(@masonic_lodge), class: "nav-link" %></a>
+                  <a><%= link_to 'Loja', backoffice_masonic_lodge_path(:masonic_lodge_id), class: "nav-link" %></a>
                   <a class="nav-link" href="account-profile.html">Cadastro</a>
                   <a class="nav-link" href="account-billing.html">Billing</a>
                   <a class="nav-link" href="account-security.html">Security</a>
