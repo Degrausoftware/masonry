@@ -1,0 +1,176 @@
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content">
+                                <div class="row align-items-center justify-content-between pt-3">
+                                    <div class="col-auto mb-3">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="user"></i></div>
+                                            Informações da Lojas <%= @masonic_lodge.name %>
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4 mt-4">
+                        <!-- Account page navigation-->
+                        
+                        <hr class="mt-0 mb-4" />
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <!-- Profile picture card-->
+                                <div class="card mb-4 mb-xl-0">
+                                    <div class="card-header">Brasão da Loja</div>
+                                    <div class="card-body text-center">
+                                        <!-- Profile picture image-->
+                                        <%= image_tag('img/store_coat_of_arms/maconica.png', class: 'img-account-profile rounded-circle mb-2', alt: 'Imagem Brasão') %>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <!-- Account details card-->
+                                <div class="card mb-4">
+                                    <div class="card-header">Informações Detalhada da Loja</div>
+                                    <div class="card-body">
+                                        <form>
+                                            <!-- Form Group (username)-->
+                                            <div class="p-2 mb-1">
+                                                <label class="fw-bold small mb-1" for="inputUsername">Loja</label>
+                                                <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.name %></div>
+                                            </div>
+                                            <p class="fs-6 fw-bold">Localização:</p>
+                                            <hr class="mt-0 mb-4" />
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                            <!-- Form Row-->
+                                            <div class="row gx-3 p-2 mb-1">
+                                                <!-- Form Group (first name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputFirstName">Endereço</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.address %></div>
+                                                </div>
+                                                <!-- Form Group (last name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputLastName">Bairro</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.district %></div>
+                                                </div>
+                                            </div>
+                                            <!-- Form Row        -->
+                                            <div class="row gx-3 p-2 mb-1">
+                                                <!-- Form Group (organization name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputOrgName">Cidade</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.city %></div>
+                                                </div>
+                                                <!-- Form Group (location)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputLocation">Estado</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.state %></div>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <!-- Form Group (organization name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputOrgName">País</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.country %></div>
+                                                </div>
+                                                <!-- Form Group (location)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputLocation">CEP</label>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.code_zip %></div>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 fw-bold">Maçônaria:</p>
+                                             <hr class="mt-0 mb-4" />
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <!-- Form Group (organization name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputOrgName">cnpj</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.cnpj %></div>
+                                                </div>
+                                                <!-- Form Group (location)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputLocation">Decreto de Criação da Loja</label>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.decree_creation_of_the_store %></div>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <!-- Form Group (organization name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputOrgName">Data da fundação</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.founding_date %></div>
+                                                </div>
+                                                <!-- Form Group (location)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputLocation">Potência</label>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.pontency %></div>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <!-- Form Group (organization name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputOrgName">Reuniões</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.meeting %></div>
+                                                </div>
+                                                <!-- Form Group (location)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputLocation">Rito</label>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.rite %></div>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <!-- Form Group (organization name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputOrgName">Númeração da Loja</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.store_number %></div>
+                                                </div>
+                                                <!-- Form Group (location)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputLocation">Venerável</label>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.venerable %></div>
+                                                </div>
+                                            </div>
+                                             <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <!-- Form Group (organization name)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputOrgName">Email</label>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.email %></div>
+                                                </div>
+                                                <!-- Form Group (location)-->
+                                                <div class="col-md-6">
+                                                    <label class="small mb-1" for="inputLocation">Responsável do email</label>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.responsible %></div>
+                                                </div>
+                                            </div>
+                                            <!-- Form Group (email address)-->
+                                            <div class="mb-3">
+                                                <label class="small mb-1" for="inputEmailAddress">Site</label>
+                                                <div class="fw-bold shadow-none p-3 mb-5 bg-body-tertiary rounded"> <%= @masonic_lodge.web_site %></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="footer-admin mt-auto footer-light">
+                    <div class="container-xl px-4">
+                        <div class="row">
+                            <div class="col-md-6 small">Copyright &copy; Your Website 2021</div>
+                            <div class="col-md-6 text-md-end small">
+                                <a href="#!">Privacy Policy</a>
+                                &middot;
+                                <a href="#!">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <%= javascript_include_tag 'scripts' %>

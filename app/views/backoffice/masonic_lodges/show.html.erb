@@ -151,7 +151,12 @@
                                                 <label class="small mb-1" for="inputEmailAddress">Site</label>
                                                 <div class="fw-bold shadow-none p-3 mb-5 bg-body-tertiary rounded"> <%= @masonic_lodge.web_site %></div>
                                             </div>
+                                            
                                         </form>
+                                        <div class="button-container">
+                                        <button class="btn btn-primary" type="button">Salva</button>
+                                        <%= link_to "Editar", edit_backoffice_masonic_lodge_path(@masonic_lodge), class: 'btn btn-warning' %>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

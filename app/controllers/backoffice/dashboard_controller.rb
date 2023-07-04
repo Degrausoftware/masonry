@@ -9,6 +9,7 @@ module Backoffice
       @member = Member.count
       @masonic_lodge = MasonicLodge.count
       @masonic_lodges = MasonicLodge.all
+
       @son = Son.count
     end
 

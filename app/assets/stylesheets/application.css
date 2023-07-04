@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require simple_form
  */
 .topnav.navbar-dark #sidebarToggle {
     color: rgba(255, 255, 255, 0.5);

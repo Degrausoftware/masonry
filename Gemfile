@@ -18,6 +18,7 @@ gem 'rubocop', '~> 1.36', require: false
 gem 'sass-rails', '~> 6.0'
 gem 'turbolinks', '~> 5.2', '>= 5.2.1'
 gem 'webpacker', '~> 5.4', '>= 5.4.3'
+gem 'simple_form'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
