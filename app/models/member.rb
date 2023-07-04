@@ -36,21 +36,20 @@
 #
 class Member < ApplicationRecord
   belongs_to :masonic_lodge
-  has_one :son
-  has_one_attached :avatar
-  validates_presence_of :name
-  validates :mobile_phone, presence: true
-  # validades_presence_of :masonic_lodge_id
-  
-  # validates_presence_of :cpf, unless: :skip_cpf_validation, on: :create
-  # validate :validate_cpf, unless: :skip_cpf_validation, on: [ :create, :update ], if: -> { cpf.present? }
-  # validates :cpf, uniqueness: true, allow_nil: true, on: [ :create, :update ], if: -> { cpf.present? }
 
-  def birth_date
-    Date.strptime('03-02-2001', '%d-%m-%Y')
+  def author
+    "Lojas FUlando de tal"
   end
 
-  def cpf_valid?
-    errors.add(:cpf, :invalid) unless CPF.valid?(cpf)
+  def masonic_lodge_name
+    self.masonic_lodge.name
+  end
+
+  def as_json(optins={})
+    super(
+      root: true,
+      methods: [:masonic_lodge_name],
+      include: { masonic_lodge: { only: :name}}
+    ) 
   end
 end

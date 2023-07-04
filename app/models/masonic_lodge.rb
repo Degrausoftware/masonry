@@ -13,9 +13,10 @@
 #  correspoding_address         :string
 #  country                      :string
 #  decree_creation_of_the_store :string
+#  district                     :string
 #  email                        :string
 #  founding_date                :date
-#  meeting                      :date
+#  meeting                      :string
 #  mobile_phone                 :string
 #  name                         :string
 #  nationality                  :string
@@ -33,8 +34,23 @@
 #
 class MasonicLodge < ApplicationRecord
   has_many :members
-  validates_presence_of :email
-  validates_presence_of :address
-  validates_presence_of :cnpj
-  validates_presence_of :city
+  # validates_presence_of :email
+  # validates_presence_of :address
+  # validates_presence_of :cnpj
+  # validates_presence_of :city
+  def members_name
+    self.members.name
+  end
+
+  def as_json(optins={})
+    super(
+      root: true,
+      methods: [:members_name],
+      include: { members: { only: :name }}
+      # methods: [:member_name],
+      # include: { member: { only: :name }}
+      # methods: [:member_name],
+      # include: { member: { only: :description }}
+    )
+  end
 end

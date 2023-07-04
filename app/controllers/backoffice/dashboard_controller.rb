@@ -7,11 +7,10 @@ module Backoffice
     def index
       @admins = Admin.all
       @member = Member.count
-      @son = Son.count
-    end
+      @masonic_lodge = MasonicLodge.count
+      @masonic_lodges = MasonicLodge.all
 
-    def redirect_to(root_path, notice:)
-      # code here
+      @son = Son.count
     end
 
     def destroy

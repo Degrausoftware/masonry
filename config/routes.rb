@@ -4,15 +4,14 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :members
+      resources :masonic_lodges
     end
   end
 
   namespace :backoffice do
     delete '/logout', to: '/session#destroy'
 
-    resources :masonic_lodges do
-      get 'profile', to: 'masonic_lodges#profile'
-    end
+    resources :masonic_lodges
     resources :members do
       get 'account_profile', to: 'members#account_profile'
       get 'son_profile', to: 'members#son_profile'

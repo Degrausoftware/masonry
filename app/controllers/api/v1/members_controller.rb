@@ -7,6 +7,9 @@ module Api
         render json: @members
       end
       
+      def show
+        
+      end
     end
   end
 end

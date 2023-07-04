@@ -151,7 +151,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_02_192448) do
     t.string "email"
     t.string "web_site"
     t.string "rite"
-    t.date "meeting"
+    t.string "meeting"
     t.string "pontency"
     t.string "store_number"
     t.string "venerable"
@@ -161,6 +161,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_02_192448) do
     t.string "country"
     t.date "founding_date"
     t.string "cnpj"
+    t.string "district"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
