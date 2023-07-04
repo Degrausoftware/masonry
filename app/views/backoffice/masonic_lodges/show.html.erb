@@ -8,7 +8,7 @@
                                     <div class="col-auto mb-3">
                                         <h1 class="page-header-title">
                                             <div class="page-header-icon"><i data-feather="user"></i></div>
-                                            Informações da Lojas <%= @masonic_lodge.name %>
+                                            Criar nova loja <%= @masonic_lodge.name %>
                                         </h1>
                                     </div>
                                 </div>
@@ -154,7 +154,7 @@
                                             
                                         </form>
                                         <div class="button-container">
-                                        <button class="btn btn-primary" type="button">Salva</button>
+                                        <%= link_to "Criar", new_backoffice_masonic_lodge_path, class: 'btn btn-primary' %>
                                         <%= link_to "Editar", edit_backoffice_masonic_lodge_path(@masonic_lodge), class: 'btn btn-warning' %>
                                         </div>
                                     </div>

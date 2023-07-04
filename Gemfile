@@ -20,6 +20,8 @@ gem 'turbolinks', '~> 5.2', '>= 5.2.1'
 gem 'webpacker', '~> 5.4', '>= 5.4.3'
 gem 'simple_form'
 gem 'country_select'
+gem "image_processing", ">= 1.2"
+
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
