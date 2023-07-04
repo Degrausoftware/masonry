@@ -17,7 +17,7 @@ class Backoffice::MasonicLodgesController < BackofficeController
   def create 
     @masonic_lodge = MasonicLodge.new(masonic_lodge_params)
     if @masonic_lodge.save
-      redirect_to @masonic_lodge
+      redirect_to backoffice_masonic_lodge_path(@masonic_lodge), notice: "Cadatrado essa porra"
     else
       render :new, status: :unprocessable_entity
     end
