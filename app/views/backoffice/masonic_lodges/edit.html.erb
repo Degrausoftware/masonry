@@ -41,129 +41,85 @@
                                     <div class="card-header">Informações Detalhada da Loja</div>
                                     <div class="card-body">
                                         <%= simple_form_for @masonic_lodge, url: backoffice_masonic_lodge_path(@masonic_lodge), method: :patch do |f| %>
-                                          <%= f.input :name %>
-                                        <%= f.button :submit, value: "salva"%>
-                                        <% end %>
-                                            <!-- Form Group (username)-->
-                                            <div class="p-2 mb-1">
-                                                <label class="fw-bold small mb-1" for="inputUsername">Loja</label>
-                                                <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.name %></div>
-                                            </div>
+                                          <%= f.input :name, label: 'Nome' %>
                                             <p class="fs-6 fw-bold">Localização:</p>
                                             <hr class="mt-0 mb-4" />
                                             <div class="row gx-3 mb-3 p-2 mb-1">
-                                            <!-- Form Row-->
-                                            <div class="row gx-3 p-2 mb-1">
-                                                <!-- Form Group (first name)-->
+                                              <div class="row gx-3 p-2 mb-1">
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputFirstName">Endereço</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.address %></div>
+                                                  <%= f.input :address, label: 'Endereço' %>
                                                 </div>
-                                                <!-- Form Group (last name)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputLastName">Bairro</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.district %></div>
+                                                  <%= f.input :district, label: 'Bairro' %>
+                                                </div>
+                                            <div class="row gx-3 p-2 mb-1">
+                                                <div class="col-md-6">
+                                                    <%= f.input :city, label: 'Cidade' %>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <%= f.input :state, label: 'Estado' %>
                                                 </div>
                                             </div>
-                                            <!-- Form Row        -->
-                                            <div class="row gx-3 p-2 mb-1">
-                                                <!-- Form Group (organization name)-->
-                                                <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputOrgName">Cidade</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.city %></div>
-                                                </div>
-                                                <!-- Form Group (location)-->
-                                                <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputLocation">Estado</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.state %></div>
-                                                </div>
                                             </div>
                                             <br/>
                                             <div class="row gx-3 mb-3 p-2 mb-1">
-                                                <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputOrgName">País</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.country %></div>
+                                                    <%= f.input :country, as: :text, label: 'País' %>
                                                 </div>
-                                                <!-- Form Group (location)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputLocation">CEP</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.code_zip %></div>
+                                                    <%= f.input :code_zip, label: 'CEP' %>
                                                 </div>
                                             </div>
                                             <p class="fs-6 fw-bold">Maçônaria:</p>
                                              <hr class="mt-0 mb-4" />
                                             <div class="row gx-3 mb-3 p-2 mb-1">
-                                                <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputOrgName">cnpj</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.cnpj %></div>
+                                                    <%= f.input :cnpj, label: 'CNPJ' %>
                                                 </div>
-                                                <!-- Form Group (location)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputLocation">Decreto de Criação da Loja</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.decree_creation_of_the_store %></div>
+                                                    <%= f.input :decree_creation_of_the_store, label: 'Decreto de Criação da loja' %>
                                                 </div>
                                             </div>
                                             <div class="row gx-3 mb-3 p-2 mb-1">
-                                                <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputOrgName">Data da fundação</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.founding_date %></div>
+                                                    <%= f.input :founding_date, label: 'Data da Fundação' %>
                                                 </div>
-                                                <!-- Form Group (location)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputLocation">Potência</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.pontency %></div>
+                                                    <%= f.input :pontency, label: 'Potência'%>
                                                 </div>
                                             </div>
                                             <div class="row gx-3 mb-3 p-2 mb-1">
-                                                <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputOrgName">Reuniões</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.meeting %></div>
+                                                    <%= f.input :meeting, label: 'Reuniões' %>
                                                 </div>
-                                                <!-- Form Group (location)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputLocation">Rito</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.rite %></div>
+                                                    <%= f.input :rite, label: 'Rito' %>
                                                 </div>
                                             </div>
                                             <div class="row gx-3 mb-3 p-2 mb-1">
-                                                <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputOrgName">Númeração da Loja</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.store_number %></div>
+                                                    <%= f.input :store_number, label: 'Número da Loja' %>
                                                 </div>
-                                                <!-- Form Group (location)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputLocation">Venerável</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.venerable %></div>
+                                                    <%= f.input :venerable, label: 'Venerável' %>
                                                 </div>
                                             </div>
                                              <div class="row gx-3 mb-3 p-2 mb-1">
-                                                <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputOrgName">Email</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @masonic_lodge.email %></div>
+                                                    <%= f.input :email, label: 'Email' %>
                                                 </div>
-                                                <!-- Form Group (location)-->
                                                 <div class="col-md-6">
-                                                    <label class="small mb-1" for="inputLocation">Responsável do email</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @masonic_lodge.responsible %></div>
+                                                    <%= f.input :responsible, label: 'Responsavel pelo email' %>
                                                 </div>
                                             </div>
-                                            <!-- Form Group (email address)-->
                                             <div class="mb-3">
-                                                <label class="small mb-1" for="inputEmailAddress">Site</label>
-                                                <div class="fw-bold shadow-none p-3 mb-5 bg-body-tertiary rounded"> <%= @masonic_lodge.web_site %></div>
+                                                <%= f.input :web_site, label: 'Site' %>
                                             </div>
-                                            
-                                        </form>
-                                        <div class="button-container">
-                                        <button class="btn btn-primary" type="button">Salva</button>
-                                        <button class="btn btn-warning" type="button">Editar</button>
+
+                                        <div class="d-grid gap-2 col-2 mx-auto">
+                                        <%= f.button :submit, class: 'btn btn-primary', value: "salva"%>
                                         </div>
+                                        <% end %>
                                     </div>
                                 </div>
                             </div>
