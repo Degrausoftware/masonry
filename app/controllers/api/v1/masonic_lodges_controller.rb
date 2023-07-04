@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Api
   module V1
     class MasonicLodgesController < ApiController
@@ -6,7 +7,7 @@ module Api
         @masonic_lodges = MasonicLodge.all
         render json: @masonic_lodges
       end
-      
+
       def show
         @masonic_lodge = MasonicLodge.find(params[:id])
 

@@ -38,18 +38,18 @@ class Member < ApplicationRecord
   belongs_to :masonic_lodge
 
   def author
-    "Lojas FUlando de tal"
+    'Lojas FUlando de tal'
   end
 
   def masonic_lodge_name
-    self.masonic_lodge.name
+    masonic_lodge.name
   end
 
-  def as_json(optins={})
+  def as_json(_optins = {})
     super(
       root: true,
       methods: [:masonic_lodge_name],
-      include: { masonic_lodge: { only: :name}}
-    ) 
+      include: { masonic_lodge: { only: :name } }
+    )
   end
 end

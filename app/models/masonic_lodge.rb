@@ -40,14 +40,14 @@ class MasonicLodge < ApplicationRecord
   # validates_presence_of :cnpj
   # validates_presence_of :city
   def members_name
-    self.members.name
+    members.name
   end
 
-  def as_json(optins={})
+  def as_json(_optins = {})
     super(
       root: true,
       methods: [:members_name],
-      include: { members: { only: :name }}
+      include: { members: { only: :name } }
       # methods: [:member_name],
       # include: { member: { only: :name }}
       # methods: [:member_name],

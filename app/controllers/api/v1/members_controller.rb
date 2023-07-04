@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Api
   module V1
     class MembersController < ApiController
@@ -6,10 +7,8 @@ module Api
         @members = Member.all
         render json: @members
       end
-      
-      def show
-        
-      end
+
+      def show; end
     end
   end
 end
