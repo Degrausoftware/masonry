@@ -48,10 +48,6 @@ class MasonicLodge < ApplicationRecord
       root: true,
       methods: [:members_name],
       include: { members: { only: :name }}
-      # methods: [:member_name],
-      # include: { member: { only: :name }}
-      # methods: [:member_name],
-      # include: { member: { only: :description }}
     )
   end
 end

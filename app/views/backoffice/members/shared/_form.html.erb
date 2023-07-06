@@ -1,0 +1,132 @@
+
+            <div id="layoutSidenav_content">
+                <main>
+                    <header class="page-header page-header-compact page-header-light border-bottom bg-white mb-4">
+                        <div class="container-xl px-4">
+                            <div class="page-header-content">
+                                <div class="row align-items-center justify-content-between pt-3">
+                                    <div class="col-auto mb-3">
+                                        <h1 class="page-header-title">
+                                            <div class="page-header-icon"><i data-feather="book-open"></i></div>
+                                            Informações da Lojas 
+                                        </h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                    <!-- Main page content-->
+                    <div class="container-xl px-4 mt-4">
+                        <!-- Account page navigation-->
+                        
+                        <hr class="mt-0 mb-4" />
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <!-- Profile picture card-->
+                                <div class="card mb-4 mb-xl-0">
+                                    <div class="card-header">Brasão da Loja</div>
+                                    <div class="card-body text-center">
+                                      <!-- Profile picture image-->
+                                      <%= image_tag('img/store_coat_of_arms/maconica.png', class: 'img-account-profile rounded-circle mb-2', alt: 'Imagem Brasão') %>
+                                      <!-- Profile picture help block-->
+                                      <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+                                      <!-- Profile picture upload button-->
+                                      <button class="btn btn-primary" type="button">enviar imagem</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-8">
+                                <!-- Account details card-->
+                                <div class="card mb-4">
+                                    <div class="card-header">Informações Detalhada da Loja</div>
+                                    <div class="card-body">
+                                        <%= simple_form_for([:backoffice, @member]) do |f| %>
+                                          <%= f.input :name, label: 'Nome' %>
+                                            <p class="fs-6 fw-bold">Localização:</p>
+                                            <hr class="mt-0 mb-4" />
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                              <div class="row gx-3 p-2 mb-1">
+                                                <div class="col-md-6">
+                                                  <%= f.input :fathers_name, label: 'Nome do Pai' %>
+                                                </div>
+                                                <div class="col-md-6">
+                                                  <%= f.input :mothers_name, label: 'Nome da Mãe' %>
+                                                </div>
+                                            <div class="row gx-3 p-2 mb-1">
+                                                <div class="col-md-6">
+                                                    <%= f.input :birth_date, label: 'Data do nascimento:' %>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <%= f.input :place_of_birth, label: 'Cidade do nascimento:' %>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <br/>
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <div class="col-md-6">
+                                                    <%= f.input :state, as: :text, label: 'Estado' %>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <%= f.input :country, label: 'País' %>
+                                                </div>
+                                            </div>
+                                            <p class="fs-6 fw-bold">Maçônaria:</p>
+                                             <hr class="mt-0 mb-4" />
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <div class="col-md-6">
+                                                    <%= f.input :blood_type, label: 'Tipo sanguinio:' %>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <%= f.input :wedding_date, label: 'Data do casamento' %>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <div class="col-md-6">
+                                                    <%= f.input :cpf, label: 'CPF:' %>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <%= f.input :email, label: 'Email'%>
+                                                </div>
+                                            </div>
+                                            <div class="row gx-3 mb-3 p-2 mb-1">
+                                                <div class="col-md-6">
+                                                    <%= f.input :mobile_phone, label: 'Celular' %>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <%= f.input :phone, label: 'Telefone' %>
+                                                </div>
+                                            </div>
+                                            <div class="mb-3">
+                                              <label class="small mb-1" for="inputEmailAddress">Loja:</label>
+                                              <div class="fw-bold shadow-none p-3 mb-5 bg-body-tertiary rounded"> <%= @member.masonic_lodge_id %></div>
+                                            </div>
+                                        <div class="d-grid gap-2 col-2 mx-auto">
+                                        <%= f.button :submit, class: 'btn btn-primary', value: "salva"%>
+                                        </div>
+
+                                        <% end %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="footer-admin mt-auto footer-light">
+                    <div class="container-xl px-4">
+                        <div class="row">
+                            <div class="col-md-6 small">Copyright &copy; Your Website 2021</div>
+                            <div class="col-md-6 text-md-end small">
+                                <a href="#!">Privacy Policy</a>
+                                &middot;
+                                <a href="#!">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <%= javascript_include_tag 'scripts' %>
+
+    </body>
+</html>

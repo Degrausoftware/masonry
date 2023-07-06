@@ -52,18 +52,19 @@
               </div>
               <!-- Nested Sidenav Accordion (Pages -> Authentication)-->
               <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                Authentication
+                Dados do Obreiro
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
               </a>
               <div class="collapse" id="pagesCollapseAuth" data-bs-parent="#accordionSidenavPagesMenu">
                 <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPagesAuth">
                   <!-- Nested Sidenav Accordion (Pages -> Authentication -> Basic)-->
                   <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuthBasic" aria-expanded="false" aria-controls="pagesCollapseAuthBasic">
-                    Basic
+                    Cadastro
                     <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                   </a>
                   <div class="collapse" id="pagesCollapseAuthBasic" data-bs-parent="#accordionSidenavPagesAuth">
                     <nav class="sidenav-menu-nested nav">
+                      <a><%= link_to 'Informações', backoffice_member_path(:member_id), class: "nav-link" %></a>
                       <a class="nav-link" href="auth-login-basic.html">Login</a>
                       <a class="nav-link" href="auth-register-basic.html">Register</a>
                       <a class="nav-link" href="auth-password-basic.html">Forgot Password</a>
