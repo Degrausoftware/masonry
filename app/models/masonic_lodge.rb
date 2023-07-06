@@ -33,7 +33,7 @@
 #  updated_at                   :datetime         not null
 #
 class MasonicLodge < ApplicationRecord
-  has_one_attached :featured_image
+  has_one_attached :image_lodge
   has_many :members
   # validates_presence_of :email
   # validates_presence_of :address

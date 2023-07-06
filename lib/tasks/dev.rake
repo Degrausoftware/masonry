@@ -8,7 +8,7 @@ namespace :dev do
     puts '*********************************************'
     p 'cadastrando os dados do sistema'
     puts '***********************Loja**********************'
-    10.times do |_i|
+    1.times do |_i|
       MasonicLodge.create!(
         name: Faker::Name.name,
         address: Faker::Address.street_address,
