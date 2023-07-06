@@ -8,7 +8,8 @@ module Api
       end
       
       def show
-        
+        @member = Member.find_by(params[:member_id])
+        render json: @members 
       end
     end
   end
