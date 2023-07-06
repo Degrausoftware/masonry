@@ -35,6 +35,7 @@
 #  fk_rails_...  (masonic_lodge_id => masonic_lodges.id)
 #
 class Member < ApplicationRecord
+  has_one_attached :image_member
   belongs_to :masonic_lodge
   
   def author
