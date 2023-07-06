@@ -8,8 +8,7 @@ module Api
       end
       
       def show
-        @masonic_lodge = MasonicLodge.find(params[:id])
-
+        @masonic_lodge = MasonicLodge.find_by(params[:masonic_lodge_id])
         render json: @masonic_lodge
       end
     end

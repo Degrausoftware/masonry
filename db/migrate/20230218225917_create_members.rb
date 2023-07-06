@@ -3,7 +3,7 @@
 class CreateMembers < ActiveRecord::Migration[7.0]
   def change
     create_table :members do |t|
-      t.string :city
+      t.string :country
       t.string :cpf
       t.string :degree_of_instruction
       t.string :email

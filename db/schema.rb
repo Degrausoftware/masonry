@@ -167,7 +167,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_02_192448) do
   end
 
   create_table "members", force: :cascade do |t|
-    t.string "city"
+    t.string "country"
     t.string "cpf"
     t.string "degree_of_instruction"
     t.string "email"

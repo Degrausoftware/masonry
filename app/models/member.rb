@@ -8,7 +8,7 @@
 #  admin                 :boolean
 #  birth_date            :date
 #  blood_type            :string
-#  city                  :string
+#  country               :string
 #  cpf                   :string
 #  degree_of_instruction :string
 #  email                 :string
@@ -36,7 +36,7 @@
 #
 class Member < ApplicationRecord
   belongs_to :masonic_lodge
-
+  
   def author
     "Lojas FUlando de tal"
   end

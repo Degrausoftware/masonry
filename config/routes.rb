@@ -3,8 +3,9 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      resources :members
-      resources :masonic_lodges
+      resources :masonic_lodges do 
+        resources :members
+      end
     end
   end
 
@@ -12,10 +13,7 @@ Rails.application.routes.draw do
     delete '/logout', to: '/session#destroy'
 
     resources :masonic_lodges
-    resources :members do
-      get 'account_profile', to: 'members#account_profile'
-      get 'son_profile', to: 'members#son_profile'
-    end
+    resources :members
   end
   root 'backoffice/dashboard#index'
   devise_for :admins

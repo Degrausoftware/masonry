@@ -8,7 +8,7 @@
 #  admin                 :boolean
 #  birth_date            :date
 #  blood_type            :string
-#  city                  :string
+#  country               :string
 #  cpf                   :string
 #  degree_of_instruction :string
 #  email                 :string

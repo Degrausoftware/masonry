@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-
 class Backoffice::MasonicLodgesController < BackofficeController
   def index 
     @masonic_lodges = MasonicLodge.all
@@ -17,10 +16,10 @@ class Backoffice::MasonicLodgesController < BackofficeController
   def create 
     @masonic_lodge = MasonicLodge.new(masonic_lodge_params)
     if @masonic_lodge.save
-      redirect_to backoffice_masonic_lodge_path(@masonic_lodge), notice: "Cadatrado essa porra"
+      redirect_to backoffice_masonic_lodge_path(@masonic_lodge.id), notice: "Cadatrado essa porra"
     else
       render :new, status: :unprocessable_entity
-    end
+    end 
   end
 
   def edit
