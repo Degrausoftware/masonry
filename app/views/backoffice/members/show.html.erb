@@ -27,7 +27,7 @@
                                     <div class="card-header">Brasão da Loja</div>
                                     <div class="card-body text-center">
                                         <!-- Profile picture image-->
-                                        <%= image_tag('img/store_coat_of_arms/maconica.png', class: 'img-account-profile rounded-circle mb-2', alt: 'Imagem Brasão') %>
+                                        <%= image_tag(@member.image_member, class: 'img-account-profile rounded-circle mb-2', alt: 'Imagem Brasão') if @member.image_member.present? %>
                                     </div>
                                 </div>
                             </div>
