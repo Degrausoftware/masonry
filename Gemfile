@@ -7,21 +7,20 @@ ruby '3.2.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'bootstrap_sb_admin_base_v2'
+gem 'country_select'
 gem 'cpf_cnpj'
 gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'devise-i18n', '~> 1.10', '>= 1.10.1'
 gem 'font-awesome-rails'
+gem 'image_processing', '>= 1.2'
 gem 'jwt'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 gem 'rails-i18n', '~> 7.0', '>= 7.0.1'
 gem 'rubocop', '~> 1.36', require: false
 gem 'sass-rails', '~> 6.0'
+gem 'simple_form'
 gem 'turbolinks', '~> 5.2', '>= 5.2.1'
 gem 'webpacker', '~> 5.4', '>= 5.4.3'
-gem 'simple_form'
-gem 'country_select'
-gem "image_processing", ">= 1.2"
-
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'

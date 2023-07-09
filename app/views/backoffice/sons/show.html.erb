@@ -26,7 +26,6 @@
                                 <div class="card mb-4 mb-xl-0">
                                     <div class="card-header">Brasão da Loja</div>
                                     <div class="card-body text-center">
-                                    <%# <%= @masonic_lodge.members.each do |member| %> %>
                                         <!-- Profile picture image-->
                                         <%= image_tag(@member.image_member, class: 'img-account-profile rounded-circle mb-2', alt: 'Imagem Brasão') if @member.image_member.present? %>
                                     </div>
@@ -135,11 +134,10 @@
                                                     <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @member.admin %></div>
                                                 </div>
                                             </div>                                            
-                                        <%# <% end %> %>
                                         </form>
                                         <div class="button-container">
-                                        <%= link_to "Criar", new_backoffice_masonic_lodge_member_path, class: 'btn btn-primary' %>
-                                        <%= link_to "Editar", edit_backoffice_masonic_lodge_member_path(@member), class: 'btn btn-warning' %>
+                                        <%= link_to "Criar", new_backoffice_member_path, class: 'btn btn-primary' %>
+                                        <%= link_to "Editar", edit_backoffice_member_path(@member), class: 'btn btn-warning' %>
                                         </div>
                                     </div>
                                 </div>

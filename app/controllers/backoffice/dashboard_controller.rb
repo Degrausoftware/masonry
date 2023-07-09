@@ -3,6 +3,7 @@
 module Backoffice
   class DashboardController < BackofficeController
     before_action :authenticate_admin!
+    # before_action :authenticate_member!
     before_action :set_admin, only: %i[edit update]
     def index
       @admins = Admin.all

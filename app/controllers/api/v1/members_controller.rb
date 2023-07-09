@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Api
   module V1
     class MembersController < ApiController
@@ -6,10 +7,10 @@ module Api
         @members = Member.all
         render json: @members
       end
-      
+
       def show
         @member = Member.find_by(params[:member_id])
-        render json: @members 
+        render json: @member
       end
     end
   end
