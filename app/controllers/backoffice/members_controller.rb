@@ -2,19 +2,22 @@
 
 module Backoffice
   class MembersController < BackofficeController
+    # before_action :set_masonic_lodge
     before_action :find_masonic_lodge
-    before_action :set_member, only: %i[update destroy]
+    before_action :set_member, only: %i[show edit update destroy]
     # GET /members
     # GET /members.json
     def index
       @members = Member.all
+      @sons = Son.all
       # render json: @members
     end
 
     # GET /members/1
     # GET /members/1.json
     def show
-      @member = Member.find_by(params[:member_id])
+      # find_masonic_lodge
+      # @member = @masonic_lodge.members.find_by(masonic_lodge_id: params[:member_id])
     end
 
     def new
@@ -24,12 +27,10 @@ module Backoffice
     # POST /members
     # POST /members.json
     def create
-      @member = @masonic_lodge.members.build(member_params)
-      if @member.save
-        redirect_to backoffice_member_path(:id), notice: 'cadastrado'
-      else 
-        render :new, statu: :unprocessable_entity
-      end
+      @masonic_lodge = MasonicLodge.find(params[:masonic_lodge_id])
+      @member = @masonic_lodge.members.create(member_params)
+
+      redirect_to backoffice_member_path(@member), notice: 'cadastrado'
     end
 
     def edit
@@ -41,7 +42,7 @@ module Backoffice
     def update
       @member = Member.find_by(params[:member_id])
       if @member.update(member_params)
-        redirect_to backoffice_member_path, notice: "atuzalizou"
+        redirect_to backoffice_member_path, notice: 'atuzalizou'
       else
         render :edit
       end
@@ -56,9 +57,8 @@ module Backoffice
     private
 
     def find_masonic_lodge
-      @masonic_lodge = MasonicLodge.find_by(params[:masonic_lodge_id])
+      @masonic_lodge = MasonicLodge.find(params[:masonic_lodge_id])
     end
-
 
     # Use callbacks to share common setup or constraints between actions.
     def set_member
@@ -69,7 +69,7 @@ module Backoffice
     def member_params
       params.require(:member).permit(:id, :name, :birth_date, :place_of_birth, :state, :nationality, :country, :phone,
                                      :mobile_phone, :email, :relationship, :wedding_date, :blood_type, :fathers_name,
-                                     :mothers_name, :cpf, :degree_of_instruction, :avatar, :masonic_lodge_id, :image_member )
+                                     :mothers_name, :cpf, :degree_of_instruction, :avatar, :masonic_lodge_id, :image_member)
     end
   end
 end

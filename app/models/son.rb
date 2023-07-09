@@ -26,4 +26,12 @@ class Son < ApplicationRecord
   validates :birth_date, presence: true
   validates :gender, presence: true
   validates :name_sons, presence: true
+
+  def as_json(_optins = {})
+    super(
+      root: true,
+      methods: [:member],
+      include: { member: { only: :name_sons } }
+    )
+  end
 end

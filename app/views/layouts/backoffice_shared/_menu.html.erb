@@ -31,14 +31,14 @@
           <!-- Sidenav Accordion (Pages)-->
           <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
             <div class="nav-link-icon"><i data-feather="grid"></i></div>
-            Loja
+            Administrativo da loja
             <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
           </a>
           <div class="collapse" id="collapsePages" data-bs-parent="#accordionSidenav">
             <nav class="sidenav-menu-nested nav accordion" id="accordionSidenavPagesMenu">
               <!-- Nested Sidenav Accordion (Pages -> Account)-->
               <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAccount" aria-expanded="false" aria-controls="pagesCollapseAccount">
-                Dados da Loja
+                Loja
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
               </a>
               <div class="collapse" id="pagesCollapseAccount" data-bs-parent="#accordionSidenavPagesMenu">
@@ -52,7 +52,7 @@
               </div>
               <!-- Nested Sidenav Accordion (Pages -> Authentication)-->
               <a class="nav-link collapsed" href="javascript:void(0);" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                Dados do Obreiro
+                Obreiro
                 <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
               </a>
               <div class="collapse" id="pagesCollapseAuth" data-bs-parent="#accordionSidenavPagesMenu">
@@ -64,8 +64,8 @@
                   </a>
                   <div class="collapse" id="pagesCollapseAuthBasic" data-bs-parent="#accordionSidenavPagesAuth">
                     <nav class="sidenav-menu-nested nav">
-                      <a><%= link_to 'Informações', backoffice_member_path(:member_id), class: "nav-link" %></a>
-                      <a class="nav-link" href="auth-login-basic.html">Login</a>
+                      <a><%#= link_to 'Informações', backoffice_masonic_lodge_member_path(@masonic_lodge.member), class: "nav-link" %></a>
+                      <a class="nav-link" href="auth-login-basic.html"><#%= link_to 'Sobrinhos', backoffice_masonic_lodge_member_son_path(:id), class: 'nav-link' %></a>
                       <a class="nav-link" href="auth-register-basic.html">Register</a>
                       <a class="nav-link" href="auth-password-basic.html">Forgot Password</a>
                     </nav>

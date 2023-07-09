@@ -26,9 +26,7 @@
                                 <div class="card mb-4 mb-xl-0">
                                     <div class="card-header">Brasão da Loja</div>
                                     <div class="card-body text-center">
-                                        <!-- Profile picture image-->
-                                        <%= image_tag('img/store_coat_of_arms/maconica.png', class: 'img-account-profile rounded-circle mb-2', alt: 'Imagem Brasão') %>
-                                        <%= image_tag(@masonic_lodge.image_lodge, resize: '50x50') if @masonic_lodge.image_lodge.present? %>
+                                        <%= image_tag(@masonic_lodge.image_lodge, size: '200x200') if @masonic_lodge.image_lodge.present? %>
                                     </div>
                                 </div>
                             </div>

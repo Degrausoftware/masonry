@@ -6,7 +6,6 @@ class CreateMembers < ActiveRecord::Migration[7.0]
       t.string :country
       t.string :cpf
       t.string :degree_of_instruction
-      t.string :email
       t.string :fathers_name
       t.string :mobile_phone
       t.string :mothers_name
