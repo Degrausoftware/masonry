@@ -30,7 +30,7 @@ module Backoffice
       @masonic_lodge = MasonicLodge.find(params[:masonic_lodge_id])
       @member = @masonic_lodge.members.create(member_params)
 
-      redirect_to backoffice_member_path(@member), notice: 'cadastrado'
+      redirect_to backoffice_masonic_lodge_member_path(@masonic_lodge, :member_id), notice: 'cadastrado'
     end
 
     def edit
@@ -42,7 +42,7 @@ module Backoffice
     def update
       @member = Member.find_by(params[:member_id])
       if @member.update(member_params)
-        redirect_to backoffice_member_path, notice: 'atuzalizou'
+        redirect_to backoffice_masonic_lodge_member_path, notice: 'atuzalizou'
       else
         render :edit
       end
@@ -57,12 +57,12 @@ module Backoffice
     private
 
     def find_masonic_lodge
-      @masonic_lodge = MasonicLodge.find(params[:masonic_lodge_id])
+      @masonic_lodge = MasonicLodge.find_by(params[:masonic_lodge])
     end
 
     # Use callbacks to share common setup or constraints between actions.
     def set_member
-      @member = Member.find(params[:id])
+      @member = Member.find_by(params[:member_id])
     end
 
     # Only allow a list of trusted parameters through.
