@@ -7,9 +7,8 @@ module Backoffice
     before_action :set_admin, only: %i[edit update]
     def index
       @admins = Admin.all
-      @member = Member.count
-      @masonic_lodge = MasonicLodge.count
-      @masonic_lodges = MasonicLodge.all
+      @members = Member.limit(10)
+      @masonic_lodges = MasonicLodge.limit(10)
 
       @son = Son.count
     end

@@ -3,10 +3,29 @@
 import "@hotwired/turbo-rails"
 import "./controllers"
 import 'startbootstrap-sb-admin/scss/sb-admin.scss';
+import { DataTable } from "simple-datatables";
+document.addEventListener("DOMContentLoaded", () => {
+    const activities = document.querySelector("#activities");
+    if (activities) {
+        const dataTable = new DataTable(activities);
+    }
+});
+
 import Litepicker from 'litepicker'
 const picker = new Litepicker({
     element: document.getElementById('litepicker')
 });
+function eventFired(type) {
+    let n = document.querySelector('#demo_info');
+    n.innerHTML +=
+        '<div>' + type + ' event - ' + new Date().getTime() + '</div>';
+    n.scrollTop = n.scrollHeight;
+}
+
+new DataTable('#example')
+    .on('order.dt', () => eventFired('Order'))
+    .on('search.dt', () => eventFired('Search'))
+    .on('page.dt', () => eventFired('Page'));
 window.addEventListener('DOMContentLoaded', event => {
 
     const litepickerSingleDate = document.getElementById('litepickerSingleDate');
