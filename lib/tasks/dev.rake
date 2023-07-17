@@ -3,11 +3,13 @@
 namespace :dev do
   desc 'Configura o ambiente de desenvolvimento'
   task setup: :environment do
-    puts 'Resetando o banco de dados...!...!....!...!...!'
-    puts 'Finalizando o reset banco de dados...!...!....!...!...!'
-    puts '*********************************************'
+    puts 'Resetando o banco de dados.U+1F440..!...!....!...!...!U+1F98D'
+    %i(rails db:drop db:create db:migrate db:seed )
+    puts 'Finalizando o reset banco de dados...!U+1F914U+1F914U+1F914U+1F914U+1F914!....!...!...!'
+    puts '****************U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644U+1F644*********************'
     p 'cadastrando os dados do sistema'
-    puts '***********************Loja**********************'
+    puts '***********************Loja**************************'
+    puts '***********************U+1F976U+1F976U+1F976U+1F976U+1F976U+1F976************************'
     MasonicLodge.create!(
       name: Faker::Name.name,
       address: Faker::Address.street_address,
@@ -35,9 +37,11 @@ namespace :dev do
       cnpj: Faker::IDNumber.brazilian_citizen_number(formatted: true)
     )
     puts '***********************Member**********************'
+    puts '***********************&#128128;&#128128;&#128128;&#128128;&#128128;&#128128;**********************'
     MasonicLodge.all.each do |masonic_lodge|
       Random.rand(100).times do |_i|
         member = Member.create!(
+
           name: Faker::Name.name,
           admin: Faker::Boolean.boolean(true_ratio: 0.2),
           birth_date: Faker::Date.birthday(min_age: 18, max_age: 65),
@@ -72,4 +76,6 @@ namespace :dev do
       )
     end
   end
+  puts '*******************&#129395**************************'
+
 end

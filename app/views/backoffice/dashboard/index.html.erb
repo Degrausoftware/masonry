@@ -1,203 +1,245 @@
 <div id="layoutSidenav_content">
   <main>
-    <!-- Main page content-->
-    <div class="container-xl px-4 mt-5">
-      <!-- Custom page header alternative example-->
-      <div class="d-flex justify-content-between align-items-sm-center flex-column flex-sm-row mb-4">
-        <div class="me-4 mb-3 mb-sm-0">
-          <h1 class="mb-0">Painel de informações</h1>
-          <div class="small">
-            <span class="fw-500 text-primary"><%= I18n.l(Time.now, format: "%d de %B de %Y")%></span>
-          </div>
-        </div>
-        <!-- Date range picker example-->
-        <div class="input-group input-group-joined border-0 shadow" style="width: 16.5rem">
-          <span class="input-group-text"><i data-feather="calendar"></i></span>
-          <input class="form-control ps-0 pointer" id="litepickerRangePlugin" placeholder="Select date range..." />
-        </div>
-      </div>
-      <!-- Illustration dashboard card example-->
-      <div class="card card-waves mb-4 mt-5">
-        <div class="card-body p-5">
+    <header class="page-header page-header-dark bg-gradient-primary-to-secondary pb-10">
+      <div class="container-xl px-4">
+        <div class="page-header-content pt-4">
           <div class="row align-items-center justify-content-between">
-            <div class="col">
-              <h2 class="text-primary">Bem vindo ao Sistema Administrativo </h2>
-              <p class="text-gray-700">Sistema administrativo eficiente e personalizado para instituições maçônicas, simplificando processos e promovendo uma gestão organizada</p>
-              <a class="btn btn-primary p-3" href="#!">
-                Manual do usuário
-                <i class="ms-1" data-feather="arrow-right"></i>
-              </a>
-            </div>
-            <div class="col d-none d-lg-block mt-xxl-n4"><img class="img-fluid px-xl-4 mt-xxl-n5" src="assets/img/illustrations/statistics.svg" /></div>
-          </div>
-        </div>
-      </div>
-       <div class="card mb-4">
-        <div class="card-header">Area Chart Example</div>
-          <div class="card-body">
-            <div class="chart-area"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>
-            </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
-        </div>
-      <div class="row">
-        <div class="col-xl-3 col-md-6 mb-4">
-          <!-- Dashboard info widget 1-->
-          <div class="card border-start-lg border-start-primary h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <div class="flex-grow-1">
-                  <div class="small fw-bold text-primary mb-1">Lojas</div>
-                  <div class="h5"><%= @masonic_lodge %></div>
-                  <div class="text-xs fw-bold text-success d-inline-flex align-items-center">
-                    <i class="me-1" data-feather="trending-up"></i>
-                    12%
-                  </div>
-                </div>
-                <div class="ms-2"><i class="fas fa-thin fa-user fa-2x text-gray-200"></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-          <!-- Dashboard info widget 2-->
-          <div class="card border-start-lg border-start-secondary h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <div class="flex-grow-1">
-                  <div class="small fw-bold text-secondary mb-1">Obreiros</div>
-                  <div class="h5"><%= @member %></div>
-                  <div class="text-xs fw-bold text-danger d-inline-flex align-items-center">
-                    <i class="me-1" data-feather="trending-down"></i>
-                    3%
-                  </div>
-                </div>
-                <div class="ms-2"><i class="fas fa-tag fa-2x text-gray-200"></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-          <!-- Dashboard info widget 3-->
-          <div class="card border-start-lg border-start-success h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <div class="flex-grow-1">
-                  <div class="small fw-bold text-success mb-1">Sobrinhos</div>
-                  <div class="h5"><%= @son %></div>
-                  <div class="text-xs fw-bold text-success d-inline-flex align-items-center">
-                    <i class="me-1" data-feather="trending-up"></i>
-                    12%
-                  </div>
-                </div>
-                <div class="ms-2"><i class="fas fa-mouse-pointer fa-2x text-gray-200"></i></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-          <!-- Dashboard info widget 4-->
-          <div class="card border-start-lg border-start-info h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <div class="flex-grow-1">
-                  <div class="small fw-bold text-info mb-1">Conversion rate</div>
-                  <div class="h5">1.23%</div>
-                  <div class="text-xs fw-bold text-danger d-inline-flex align-items-center">
-                    <i class="me-1" data-feather="trending-down"></i>
-                    1%
-                  </div>
-                </div>
-                <div class="ms-2"><i class="fas fa-percentage fa-2x text-gray-200"></i></div>
-              </div>
+            <div class="col-auto mt-4">
+              <h1 class="page-header-title">
+                <div class="page-header-icon"><i data-feather="activity"></i></div>
+                Dashboard
+              </h1>
+              <div class="page-header-subtitle">Example dashboard overview and content summary</div>
             </div>
           </div>
         </div>
       </div>
+    </header>
+    <!-- Main page content-->
+    <div class="container-xl px-4 mt-n10">
       <div class="row">
-        <div class="col-lg-4 mb-4">
-          <!-- Illustration card example-->
-          <div class="card mb-4">
-            <div class="card-body text-center p-5">
-              <img class="img-fluid mb-5" src="assets/img/illustrations/data-report.svg" />
-              <h4>Report generation</h4>
-              <p class="mb-4">Ready to get started? Let us know now! It's time to start building that dashboard you've been waiting to create!</p>
-              <a class="btn btn-primary p-3" href="#!">Continue</a>
-            </div>
-          </div>
-          <!-- Report summary card example-->
-          <div class="card mb-4">
-            <div class="card-header">Affiliate Reports</div>
-            <div class="list-group list-group-flush small">
-              <a class="list-group-item list-group-item-action" href="#!">
-                <i class="fas fa-dollar-sign fa-fw text-blue me-2"></i>
-                Earnings Reports
-              </a>
-              <a class="list-group-item list-group-item-action" href="#!">
-                <i class="fas fa-tag fa-fw text-purple me-2"></i>
-                Average Sale Price
-              </a>
-              <a class="list-group-item list-group-item-action" href="#!">
-                <i class="fas fa-mouse-pointer fa-fw text-green me-2"></i>
-                Engagement (Clicks &amp; Impressions)
-              </a>
-              <a class="list-group-item list-group-item-action" href="#!">
-                <i class="fas fa-percentage fa-fw text-yellow me-2"></i>
-                Conversion Rate
-              </a>
-              <a class="list-group-item list-group-item-action" href="#!">
-                <i class="fas fa-chart-pie fa-fw text-pink me-2"></i>
-                Segments
-              </a>
-            </div>
-            <div class="card-footer position-relative border-top-0">
-              <a class="stretched-link" href="#!">
-                <div class="text-xs d-flex align-items-center justify-content-between">
-                  View More Reports
-                  <i class="fas fa-long-arrow-alt-right"></i>
+        <div class="col-xl-4 mb-4">
+          <!-- Dashboard example card 1-->
+          <a class="card lift h-100" href="#!">
+            <div class="card-body d-flex justify-content-center flex-column">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="me-3">
+                  <i class="feather-xl text-primary mb-3" data-feather="package"></i>
+                  <h5>Powerful Components</h5>
+                  <div class="text-muted small">To create informative visual elements on your pages</div>
                 </div>
-              </a>
-            </div>
-          </div>
-          <!-- Progress card example-->
-          <div class="card bg-primary border-0">
-            <div class="card-body">
-              <h5 class="text-white-50">Budget Overview</h5>
-              <div class="mb-4">
-                <span class="display-4 text-white">$48k</span>
-                <span class="text-white-50">per year</span>
+                <img src="assets/img/illustrations/browser-stats.svg" alt="..." style="width: 8rem" />
               </div>
-              <div class="progress bg-white-25 rounded-pill" style="height: 0.5rem"><div class="progress-bar bg-white w-75 rounded-pill" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
+            </div>
+          </a>
+        </div>
+        <div class="col-xl-4 mb-4">
+          <!-- Dashboard example card 2-->
+          <a class="card lift h-100" href="#!">
+            <div class="card-body d-flex justify-content-center flex-column">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="me-3">
+                  <i class="feather-xl text-secondary mb-3" data-feather="book"></i>
+                  <h5>Documentation</h5>
+                  <div class="text-muted small">To keep you on track when working with our toolkit</div>
+                </div>
+                <img src="assets/img/illustrations/processing.svg" alt="..." style="width: 8rem" />
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-xl-4 mb-4">
+          <!-- Dashboard example card 3-->
+          <a class="card lift h-100" href="#!">
+            <div class="card-body d-flex justify-content-center flex-column">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="me-3">
+                  <i class="feather-xl text-green mb-3" data-feather="layout"></i>
+                  <h5>Pages &amp; Layouts</h5>
+                  <div class="text-muted small">To help get you started when building your new UI</div>
+                </div>
+                <img src="assets/img/illustrations/windows.svg" alt="..." style="width: 8rem" />
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xxl-8">
+          <!-- Tabbed dashboard card example-->
+          <div class="card mb-4">
+            <div class="card-header border-bottom">
+              <!-- Dashboard card navigation-->
+              <ul class="nav nav-tabs card-header-tabs" id="dashboardNav" role="tablist">
+                <li class="nav-item me-1"><a class="nav-link active" id="overview-pill" href="#overview" data-bs-toggle="tab" role="tab" aria-controls="overview" aria-selected="true">Overview</a></li>
+                <li class="nav-item"><a class="nav-link" id="activities-pill" href="#activities" data-bs-toggle="tab" role="tab" aria-controls="activities" aria-selected="false">Activities</a></li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <div class="tab-content" id="dashboardNavContent">
+                <!-- Dashboard Tab Pane 1-->
+                <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-pill">
+                  <div class="chart-area mb-4 mb-lg-0" style="height: 20rem"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>
+                </div>
+                <!-- Dashboard Tab Pane 2-->
+                <div class="tab-pane fade" id="activities" role="tabpanel" aria-labelledby="activities-pill">
+                  <table id="datatablesSimple">
+
+                    <thead>
+                    <tr>
+                      <th>Loja</th>
+                      <th>Número</th>
+                      <th>Venerável</th>
+                      <th>E-mail</th>
+                      <th>Telefone/Whatsapp/th>
+                    </tr>
+                    </thead>
+                    <tfoot>
+                    <tr>
+                      <th>Loja</th>
+                      <th>Número</th>
+                      <th>Venerável</th>
+                      <th>E-mail</th>
+                      <th>Telefone/Whatsapp</th>
+                    </tr>
+                    </tfoot>
+                    <tbody>
+                    <% @masonic_lodges.each do |lodges| %>
+                    <tr>
+                      <td><%= lodges.name %></td>
+                      <td>
+                        <%= lodges.store_number %></td>
+                      </td>
+                      <td><%= lodges.venerable %></td>
+                      <td><%= lodges.email %></td>
+                      <td><%= lodges.mobile_phone %></td>
+                    </tr>
+                    <% end %>
+                    </tbody>
+
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-8 mb-4">
-          <!-- Area chart example-->
+          <!-- Illustration dashboard card example-->
           <div class="card mb-4">
-            <div class="card-header">Revenue Summary</div>
-            <div class="card-body">
-              <div class="chart-area"><canvas id="myAreaChart" width="100%" height="30"></canvas></div>
+            <div class="card-body py-5">
+              <div class="d-flex flex-column justify-content-center">
+                <img class="img-fluid mb-4" src="assets/img/illustrations/data-report.svg" alt="" style="height: 10rem" />
+                <div class="text-center px-0 px-lg-5">
+                  <h5>New reports are here! Generate custom reports now!</h5>
+                  <p class="mb-4">Our new report generation system is now online. You can start creating custom reporting for any documents available on your account.</p>
+                  <a class="btn btn-primary p-3" href="#!">Get Started</a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-6">
-              <!-- Bar chart example-->
-              <div class="card h-100">
-                <div class="card-header">Sales Reporting</div>
-                <div class="card-body d-flex flex-column justify-content-center">
-                  <div class="chart-bar"><canvas id="myBarChart" width="100%" height="30"></canvas></div>
-                </div>
-                <div class="card-footer position-relative">
-                  <a class="stretched-link" href="#!">
-                    <div class="text-xs d-flex align-items-center justify-content-between">
-                      View More Reports
-                      <i class="fas fa-long-arrow-alt-right"></i>
+            <div class="col-xl-6 mb-4">
+              <!-- Dashboard activity timeline example-->
+              <div class="card card-header-actions h-100">
+                <div class="card-header">
+                  Recent Activity
+                  <div class="dropdown no-caret">
+                    <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="text-gray-500" data-feather="more-vertical"></i></button>
+                    <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownMenuButton">
+                      <h6 class="dropdown-header">Filter Activity:</h6>
+                      <a class="dropdown-item" href="#!"><span class="badge bg-green-soft text-green my-1">Commerce</span></a>
+                      <a class="dropdown-item" href="#!"><span class="badge bg-blue-soft text-blue my-1">Reporting</span></a>
+                      <a class="dropdown-item" href="#!"><span class="badge bg-yellow-soft text-yellow my-1">Server</span></a>
+                      <a class="dropdown-item" href="#!"><span class="badge bg-purple-soft text-purple my-1">Users</span></a>
                     </div>
-                  </a>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="timeline timeline-xs">
+                    <!-- Timeline Item 1-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-marker">
+                        <div class="timeline-item-marker-text">27 min</div>
+                        <div class="timeline-item-marker-indicator bg-green"></div>
+                      </div>
+                      <div class="timeline-item-content">
+                        New order placed!
+                        <a class="fw-bold text-dark" href="#!">Order #2912</a>
+                        has been successfully placed.
+                      </div>
+                    </div>
+                    <!-- Timeline Item 2-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-marker">
+                        <div class="timeline-item-marker-text">58 min</div>
+                        <div class="timeline-item-marker-indicator bg-blue"></div>
+                      </div>
+                      <div class="timeline-item-content">
+                        Your
+                        <a class="fw-bold text-dark" href="#!">weekly report</a>
+                        has been generated and is ready to view.
+                      </div>
+                    </div>
+                    <!-- Timeline Item 3-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-marker">
+                        <div class="timeline-item-marker-text">2 hrs</div>
+                        <div class="timeline-item-marker-indicator bg-purple"></div>
+                      </div>
+                      <div class="timeline-item-content">
+                        New user
+                        <a class="fw-bold text-dark" href="#!">Valerie Luna</a>
+                        has registered
+                      </div>
+                    </div>
+                    <!-- Timeline Item 4-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-marker">
+                        <div class="timeline-item-marker-text">1 day</div>
+                        <div class="timeline-item-marker-indicator bg-yellow"></div>
+                      </div>
+                      <div class="timeline-item-content">Server activity monitor alert</div>
+                    </div>
+                    <!-- Timeline Item 5-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-marker">
+                        <div class="timeline-item-marker-text">1 day</div>
+                        <div class="timeline-item-marker-indicator bg-green"></div>
+                      </div>
+                      <div class="timeline-item-content">
+                        New order placed!
+                        <a class="fw-bold text-dark" href="#!">Order #2911</a>
+                        has been successfully placed.
+                      </div>
+                    </div>
+                    <!-- Timeline Item 6-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-marker">
+                        <div class="timeline-item-marker-text">1 day</div>
+                        <div class="timeline-item-marker-indicator bg-purple"></div>
+                      </div>
+                      <div class="timeline-item-content">
+                        Details for
+                        <a class="fw-bold text-dark" href="#!">Marketing and Planning Meeting</a>
+                        have been updated.
+                      </div>
+                    </div>
+                    <!-- Timeline Item 7-->
+                    <div class="timeline-item">
+                      <div class="timeline-item-marker">
+                        <div class="timeline-item-marker-text">2 days</div>
+                        <div class="timeline-item-marker-indicator bg-green"></div>
+                      </div>
+                      <div class="timeline-item-content">
+                        New order placed!
+                        <a class="fw-bold text-dark" href="#!">Order #2910</a>
+                        has been successfully placed.
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-6">
-              <!-- Pie chart example-->
+            <div class="col-xl-6 mb-4">
+              <!-- Pie chart with legend example-->
               <div class="card h-100">
                 <div class="card-header">Traffic Sources</div>
                 <div class="card-body">
@@ -230,20 +272,125 @@
             </div>
           </div>
         </div>
+        <div class="col-xxl-4">
+          <div class="row">
+            <div class="col-xl-6 col-xxl-12">
+              <!-- Team members / people dashboard card example-->
+              <div class="card mb-4">
+                <div class="card-header">People</div>
+                <div class="card-body">
+                  <!-- Item 1-->
+                  <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center flex-shrink-0 me-3">
+                      <div class="d-flex flex-column fw-bold">
+                        <% @members.each do |member| %>
+                          <% if member&.image_member.present? %>
+                          <%= image_tag member.image_member, class: 'avatar avatar-xl me-3 bg-gray-200' %>
+                            <% end %>
+                        <a><%= content_tag :span, member.name, class: 'text-dark line-height-normal mb-1' %></a>
+                        <div class="small text-muted line-height-normal">coloca o nome da loja aqui></div>
+                          <% end %>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="dropdown no-caret">
+                      <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople5" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="more-vertical"></i></button>
+                      <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople5">
+                        <a class="dropdown-item" href="#!">Action</a>
+                        <a class="dropdown-item" href="#!">Another action</a>
+                        <a class="dropdown-item" href="#!">Something else here</a>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Item 6-->
+                  <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center flex-shrink-0 me-3">
+                      <div class="avatar avatar-xl me-3 bg-gray-200"><img class="avatar-img img-fluid" src="assets/img/illustrations/profiles/profile-6.png" alt="" /></div>
+                      <div class="d-flex flex-column fw-bold">
+                        <a class="text-dark line-height-normal mb-1" href="#!">Wilf Ingram</a>
+                        <div class="small text-muted line-height-normal">Position</div>
+                      </div>
+                    </div>
+                    <div class="dropdown no-caret">
+                      <button class="btn btn-transparent-dark btn-icon dropdown-toggle" id="dropdownPeople6" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i data-feather="more-vertical"></i></button>
+                      <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="dropdownPeople6">
+                        <a class="dropdown-item" href="#!">Action</a>
+                        <a class="dropdown-item" href="#!">Another action</a>
+                        <a class="dropdown-item" href="#!">Something else here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-6 col-xxl-12">
+              <!-- Project tracker card example-->
+              <div class="card card-header-actions mb-4">
+                <div class="card-header">
+                  Projects
+                  <a class="btn btn-sm btn-primary-soft text-primary" href="#!">Create New</a>
+                </div>
+                <div class="card-body">
+                  <!-- Progress item 1-->
+                  <div class="d-flex align-items-center justify-content-between small mb-1">
+                    <div class="fw-bold">Server Setup</div>
+                    <div class="small">25%</div>
+                  </div>
+                  <div class="progress mb-3"><div class="progress-bar bg-danger" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div>
+                  <!-- Progress item 2-->
+                  <div class="d-flex align-items-center justify-content-between small mb-1">
+                    <div class="fw-bold">Database Migration</div>
+                    <div class="small">50%</div>
+                  </div>
+                  <div class="progress mb-3"><div class="progress-bar bg-warning" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div></div>
+                  <!-- Progress item 3-->
+                  <div class="d-flex align-items-center justify-content-between small mb-1">
+                    <div class="fw-bold">Version Release</div>
+                    <div class="small">75%</div>
+                  </div>
+                  <div class="progress mb-3"><div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div></div>
+                  <!-- Progress item 4-->
+                  <div class="d-flex align-items-center justify-content-between small mb-1">
+                    <div class="fw-bold">Product Listings</div>
+                    <div class="small">100%</div>
+                  </div>
+                  <div class="progress"><div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Illustration dashboard card example-->
+          <div class="card">
+            <div class="card-body text-center p-5">
+              <img class="img-fluid mb-4" src="assets/img/illustrations/team-spirit.svg" alt="" style="max-width: 16.25rem" />
+              <h5>Team Access</h5>
+              <p class="mb-4">Upgrade your plan to get access to team collaboration tools.</p>
+              <a class="btn btn-primary p-3" href="#!">Upgrade</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </main>
+  <footer class="footer-admin mt-auto footer-light">
+    <div class="container-xl px-4">
+      <div class="row">
+        <div class="col-md-6 small">Copyright &copy; Your Website 2021</div>
+        <div class="col-md-6 text-md-end small">
+          <a href="#!">Privacy Policy</a>
+          &middot;
+          <a href="#!">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
 </div>
-<%= javascript_include_tag 'scripts' %>
-<%= javascript_include_tag 'demo/chart-area-demo.js' %>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="js/scripts.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" crossorigin="anonymous"></script>
 <script src="assets/demo/chart-area-demo.js"></script>
-<script src="assets/demo/chart-bar-demo.js"></script>
 <script src="assets/demo/chart-pie-demo.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/litepicker/dist/bundle.js" crossorigin="anonymous"></script>
-<script src="./litepicker.js"></script>
-</body>
-</body>
+<script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+<script src="js/datatables/datatables-simple-demo.js"></script>
