@@ -21,6 +21,7 @@
 #  fk_rails_...  (member_id => members.id)
 #
 class Son < ApplicationRecord
+  has_one_attached :image_son
   belongs_to :member
 
   validates :birth_date, presence: true
