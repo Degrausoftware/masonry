@@ -65,7 +65,7 @@
                   <div class="collapse" id="pagesCollapseAuthBasic" data-bs-parent="#accordionSidenavPagesAuth">
                     <nav class="sidenav-menu-nested nav">
                       <a><%= link_to 'Informações', backoffice_masonic_lodge_member_path(:masonic_lodge_id, :member_id), class: "nav-link" %></a>
-                      <a class="nav-link" href="auth-login-basic.html"><#%= link_to 'Sobrinhos', backoffice_masonic_lodge_member_son_path(:id), class: 'nav-link' %></a>
+                      <a><%= link_to 'Sobrinhos', backoffice_masonic_lodge_member_son_path(:masonic_lodge_id, :member_id, :son_id), class: 'nav-link' %></a>
                       <a class="nav-link" href="auth-register-basic.html">Register</a>
                       <a class="nav-link" href="auth-password-basic.html">Forgot Password</a>
                     </nav>

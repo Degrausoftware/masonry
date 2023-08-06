@@ -8,7 +8,7 @@
                                     <div class="col-auto mb-3">
                                         <h1 class="page-header-title">
                                             <div class="page-header-icon"><i data-feather="user"></i></div>
-                                            Obreiro 
+                                            Sobrinho
                                         </h1>
                                     </div>
                                 </div>
@@ -24,23 +24,24 @@
                             <div class="col-xl-4">
                                 <!-- Profile picture card-->
                                 <div class="card mb-4 mb-xl-0">
-                                    <div class="card-header">Brasão da Loja</div>
+                                    <div class="card-header">Foto sobrinho</div>
                                     <div class="card-body text-center">
+                                      <%  %>
                                         <!-- Profile picture image-->
-                                        <%= image_tag(@member.image_member, class: 'img-account-profile rounded-circle mb-2', alt: 'Imagem Brasão') if @member.image_member.present? %>
+                                        <%#= image_tag(@son.image_son, class: 'img-account-profile rounded-circle mb-2', alt: 'Imagem Brasão') if @son.image_son.present? %>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-8">
                                 <!-- Account details card-->
                                 <div class="card mb-4">
-                                    <div class="card-header">Informações Detalhada da Loja</div>
+                                    <div class="card-header">Dados do sobrinho</div>
                                     <div class="card-body">
                                         <form>
                                             <!-- Form Group (username)-->
                                             <div class="p-2 mb-1">
                                                 <label class="fw-bold small mb-1" for="inputUsername">Nome:</label>
-                                                <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @member.name %></div>
+                                                <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%#= son.name %></div>
                                             </div>
                                             <p class="fs-6 fw-bold">Documetos:</p>
                                             <hr class="mt-0 mb-4" />
@@ -50,12 +51,12 @@
                                                 <!-- Form Group (first name)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputFirstName">Nome do Pai:</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @member.fathers_name %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%#= @member.fathers_name %></div>
                                                 </div>
                                                 <!-- Form Group (last name)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputLastName">Nome da Mãe:</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"><%= @member.mothers_name %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"><%#= @member.mothers_name %></div>
                                                 </div>
                                             </div>
                                             <!-- Form Row        -->
@@ -63,12 +64,12 @@
                                                 <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputOrgName">Data do Nascimento:</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"><%= @member.birth_date %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"><%#= @member.birth_date %></div>
                                                 </div>
                                                 <!-- Form Group (location)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputLocation">Cidade do nascimento:</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @member.place_of_birth %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%#= @member.place_of_birth %></div>
                                                 </div>
                                             </div>
                                             <br/>
@@ -76,12 +77,12 @@
                                                 <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputOrgName">Estado</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @member.state %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%#= @member.state %></div>
                                                 </div>
                                                 <!-- Form Group (location)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputLocation">País</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @member.country %></div>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%#= @member.country %></div>
                                                 </div>
                                             </div>
                                             <p class="fs-6 fw-bold">Maçônaria:</p>
@@ -90,54 +91,55 @@
                                                 <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputOrgName">Nacionalidade:</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"><%= @member.nationality %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"><%#= @member.nationality %></div>
                                                 </div>
                                                 <!-- Form Group (location)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputLocation">Tipo sanguinio:</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"><%= @member.blood_type %></div>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"><%#= @member.blood_type %></div>
                                                 </div>
                                             </div>
                                             <div class="row gx-3 mb-3 p-2 mb-1">
                                                 <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputOrgName">Estado cívil</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @member.wedding_date %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%#= @member.wedding_date %></div>
                                                 </div>
                                                 <!-- Form Group (location)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputLocation">CPF:</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"><%= @member.cpf %></div>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"><%#= @member.cpf %></div>
                                                 </div>
                                             </div>
                                             <div class="row gx-3 mb-3 p-2 mb-1">
                                                 <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputOrgName">Email:</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @member.email %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%#= @member.email %></div>
                                                 </div>
                                                 <!-- Form Group (location)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputLocation">Celular:</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @member.mobile_phone %></div>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%#= @member.mobile_phone %></div>
                                                 </div>
                                             </div>
                                             <div class="row gx-3 mb-3 p-2 mb-1">
                                                 <!-- Form Group (organization name)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputOrgName">Telefone:</label>
-                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%= @member.phone %></div>
+                                                    <div class="fw-bold shadow-none bg-body-tertiary rounded"> <%#= @member.phone %></div>
                                                 </div>
                                                 <!-- Form Group (location)-->
                                                 <div class="col-md-6">
                                                     <label class="small mb-1" for="inputLocation">Administrador:</label>
-                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%= @member.admin %></div>
+                                                    <div class="fw-bold shadow-none  bg-body-tertiary rounded"> <%#= @member.admin %></div>
                                                 </div>
-                                            </div>                                            
+                                            </div>
+                                            </div>
                                         </form>
                                         <div class="button-container">
-                                        <%= link_to "Criar", new_backoffice_member_path, class: 'btn btn-primary' %>
-                                        <%= link_to "Editar", edit_backoffice_member_path(@member), class: 'btn btn-warning' %>
+                                        <%#= link_to "Criar", new_backoffice_member_path, class: 'btn btn-primary' %>
+                                        <%#= link_to "Editar", edit_backoffice_member_path(@member), class: 'btn btn-warning' %>
                                         </div>
                                     </div>
                                 </div>
